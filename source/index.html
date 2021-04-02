@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>Интернет-магазин "кэт энерджи"</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page-body">
   <header class="page-header">
@@ -14,19 +15,19 @@
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
-        <ul class="main-nav__list">
+        <ul class="main-nav__list clear-list">
           <li class="main-nav__item main-nav__item--active">
-            <a>
+            <a class="main-nav__item-link">
               Главная
             </a>
           </li>
           <li class="main-nav__item">
-            <a href="catalog.html">
+            <a class="main-nav__item-link" href="catalog.html">
               Каталог продукции
             </a>
           </li>
           <li class="main-nav__item">
-            <a href="form.html">
+            <a class="main-nav__item-link" href="form.html">
               Подбор программы
             </a>
           </li>
@@ -38,7 +39,8 @@
     <section class="promo">
       <div class="promo__wrapper">
         <h1 class="title promo__title">
-          Функциональное питание для котов
+          Функциональное<br>
+          питание для котов
         </h1>
         <p class="promo__text">
           Занялся собой? Займись котом!
@@ -53,9 +55,9 @@
         <h2 class="visually-hidden">
           Виды программ питания
         </h2>
-        <ul class="programs-list">
-          <li class="programs-list__item program-item">
-            <h3 class="program-item__title">
+        <ul class="programs__list programs-list clear-list">
+          <li class="programs-list__item program-item program-item--slim">
+            <h3 class="title program-item__title">
               Похудение
             </h3>
             <p class="program-item__text">
@@ -65,8 +67,8 @@
               Каталог slim
             </a>
           </li>
-          <li class="programs-list__item program-item">
-            <h3 class="program-item__title">
+          <li class="programs-list__item program-item program-item--pro">
+            <h3 class="title program-item__title">
               Набор массы
             </h3>
             <p class="program-item__text">
@@ -87,29 +89,29 @@
         <h3 class="title description__title">
           Как это работает
         </h3>
-        <ul class="description-list">
-          <li class="description-list__item description-item">
-            <p class="text description-item__text">
+        <ul class="description-list clear-list">
+          <li class="description-list__item description-item description-item-sheet">
+            <p class="description-item__text">
               Функциональное питание<br>
               содержит только полезные<br>
               питательные вещества.
             </p>
           </li>
-          <li class="description-list__item description-item">
+          <li class="description-list__item description-item description-item-water">
             <p class="description-item__text">
               Выпускается в виде порошка,<br>
               который нужно лишь залить<br>
               кипятком и готово.
             </p>
           </li>
-          <li class="description-list__item description-item">
+          <li class="description-list__item description-item description-item-cutlery">
             <p class="description-item__text">
               Замените один-два приема<br>
               обычной еды на наше<br>
               функциональное питание.
             </p>
           </li>
-          <li class="description-list__item description-item">
+          <li class="description-list__item description-item description-item-time">
             <p class="description-item__text">
               Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!
             </p>
@@ -143,21 +145,23 @@
             </dd>
           </div>
         </dl>
-        <p class="live-example__text">
+        <p class="live-example__price-text">
           Затраты на питание: 15 000 РУБ.
         </p>
         <div class="live-example__slider slider">
           <img class="slider__image" src="img/example-before.png" width="311" height="232" alt="изображение полного кота">
-          <button class="slider__button" type="button">
-            было
-          </button>
-          <div class="slider__scale">
-            <div class="slider__bar"></div>
+          <div class="slider__switch slider-switch">
+            <button class="slider-switch__button" type="button">
+              было
+            </button>
+            <div class="slider-switch__scale">
+              <div class="slider-switch__bar"></div>
+            </div>
+            <div class="slider-switch__toggle" tabindex="0"></div>
+            <button class="slider-switch__button" type="button">
+              стало
+            </button>
           </div>
-          <div class="slider__toggle" tabindex="0"></div>
-          <button class="slider__button" type="button">
-            стало
-          </button>
         </div>
       </div>
     </section>
@@ -171,9 +175,9 @@
         <p class="contacts__dealers-text">
           Приглашаем к сотрудничеству дилеров!
         </p>
-        <p class="contacts__address-text">
+        <address class="contacts__address-text">
           ул. Большая<br>Конюшенная, д. 19/8<br>Санкт-Петербург
-        </p>
+        </address>
       </section>
       <section class="page-footer__map map">
         <h2 class="visually-hidden">Карта проезда</h2>
@@ -181,16 +185,16 @@
       </section>
       <section class="socials">
         <h2 class="visually-hidden">Полезные ссылки</h2>
-        <img src="./img/logo-text-mobile.svg" width="101" height="18" alt="название компании Cat Energy">
-        <ul class="social-list">
-          <li class="social-list__item social-item">
-            <a class="social-item__link" href="#"></a>
+        <img class="socials__text-logo" src="./img/logo-text-mobile.svg" width="101" height="18" alt="название компании Cat Energy">
+        <ul class="socials__list socials-list clear-list">
+          <li class="socials-list__item social-item">
+            <a class="social-item__link social-item__link--vk" href="#"></a>
           </li>
           <li class="social-list__item social-item">
-            <a class="social-item__link" href="#"></a>
+            <a class="social-item__link social-item__link--inst" href="#"></a>
           </li>
           <li class="social-list__item social-item">
-            <a class="social-item__link" href="#"></a>
+            <a class="social-item__link social-item__link--facebook" href="#"></a>
           </li>
         </ul>
         <div class="socials__html-academy html-academy">

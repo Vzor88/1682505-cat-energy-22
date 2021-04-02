@@ -1,0 +1,60 @@
+.socials {
+  background-color: var(--basik-light-grey);
+  padding: 39px 20px 22px 19px;
+  text-align: center;
+  &__text-logo {
+    margin-bottom: 32px;
+  }
+  &-list {
+    border-bottom: 1px solid var(--basik-medium-grey);
+    border-top: 1px solid var(--basik-medium-grey);
+    height: 63px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.social-item {
+  margin-right: 38px;
+  &:last-child {
+    margin-right: 0;
+  }
+  &__link {
+    display: block;
+    width: 23px;
+    height: 23px;
+    background-repeat: no-repeat;
+    &--vk {
+      background-image: url("../../img/icons/vk.svg");
+    }
+    &--inst {
+      background-image: url("../../img/icons/inst.svg");
+    }
+    &--facebook {
+      background-image: url("../../img/icons/facebook.svg");
+    }
+  }
+}
+
+.html-academy {
+  display: flex;
+  justify-content: space-between;
+  &__link {
+    font-family: Arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 18px;
+    color: var(--basik-grey);
+    margin-top: 28px;
+  }
+  &__logo {
+    background-image: url("../../img/icons/html-academy.svg");
+    background-repeat: no-repeat;
+    display: block;
+    width: 27px;
+    height: 34px;
+    margin-top: 22px;
+  }
+}

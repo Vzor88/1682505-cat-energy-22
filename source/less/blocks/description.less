@@ -1,0 +1,52 @@
+.description {
+  margin-bottom: 42px;
+  &__title {
+    font-size: 36px;
+    line-height: 40px;
+    font-weight: 400;
+    margin: 27px 0 38px 20px;
+  }
+}
+
+.description-item {
+  position: relative;
+  margin-left: 100px;
+  width: 200px;
+  &:before {
+    content: "";
+    width: 60px;
+    height: 60px;
+    background-color: var(--basik-green);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    left: -80px;
+  }
+  &-sheet {
+    &:before {
+      background-image: url("../../img/icons/icon-sheet.svg");
+    }
+  }
+  &-water {
+    &:before {
+      background-image: url("../../img/icons/icon-water.svg");
+    }
+  }
+  &-cutlery {
+    &:before {
+      background-image: url("../../img/icons/icon-cutlery.svg");
+    }
+  }
+  &-time {
+    &:before {
+      background-image: url("../../img/icons/icon-time.svg");
+    }
+  }
+  &__text {
+    font-family: Arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    color: var(--basik-grey);
+  }
+}
+
