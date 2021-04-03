@@ -17,7 +17,8 @@
 .description__item {
   position: relative;
   margin-left: 100px;
-  &:before {
+
+  &::before {
     content: "";
     width: 60px;
     height: 60px;
@@ -28,22 +29,26 @@
     left: -80px;
   }
   &--sheet {
-    &:before {
+
+    &::before {
       background-image: url("../img/icons/icon-sheet.svg");
     }
   }
   &--water {
-    &:before {
+
+    &::before {
       background-image: url("../img/icons/icon-water.svg");
     }
   }
   &--cutlery {
-    &:before {
+
+    &::before {
       background-image: url("../img/icons/icon-cutlery.svg");
     }
   }
   &--time {
-    &:before {
+
+    &::before {
       background-image: url("../img/icons/icon-time.svg");
     }
   }
