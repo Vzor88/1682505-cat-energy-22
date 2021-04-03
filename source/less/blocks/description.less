@@ -1,17 +1,22 @@
 .description {
   margin-bottom: 42px;
-  &__title {
-    font-size: 36px;
-    line-height: 40px;
-    font-weight: 400;
-    margin: 27px 0 38px 20px;
-  }
 }
 
-.description-item {
+.description__title {
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: 400;
+  margin: 27px 0 38px 20px;
+  padding: 0;
+}
+
+.description__list {
+  .clear-list();
+}
+
+.description__item {
   position: relative;
   margin-left: 100px;
-  width: 200px;
   &:before {
     content: "";
     width: 60px;
@@ -22,31 +27,29 @@
     position: absolute;
     left: -80px;
   }
-  &-sheet {
+  &--sheet {
     &:before {
-      background-image: url("../../img/icons/icon-sheet.svg");
+      background-image: url("../img/icons/icon-sheet.svg");
     }
   }
-  &-water {
+  &--water {
     &:before {
-      background-image: url("../../img/icons/icon-water.svg");
+      background-image: url("../img/icons/icon-water.svg");
     }
   }
-  &-cutlery {
+  &--cutlery {
     &:before {
-      background-image: url("../../img/icons/icon-cutlery.svg");
+      background-image: url("../img/icons/icon-cutlery.svg");
     }
   }
-  &-time {
+  &--time {
     &:before {
-      background-image: url("../../img/icons/icon-time.svg");
+      background-image: url("../img/icons/icon-time.svg");
     }
-  }
-  &__text {
-    font-family: Arial, sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    color: var(--basik-grey);
   }
 }
 
+.description__item-text {
+  font-family: @font-arial;
+  color: var(--basik-grey);
+}
