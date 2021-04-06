@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>Форма подбора питания интернет-магазина "кэт энерджи"</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page-body">
   <header class="page-header">
@@ -16,17 +17,17 @@
         </button>
         <ul class="main-nav__list">
           <li class="main-nav__item">
-            <a href="index.html">
+            <a class="main-nav__item-link" href="index.html">
               Главная
             </a>
           </li>
           <li class="main-nav__item">
-            <a href="catalog.html">
+            <a class="main-nav__item-link" href="catalog.html">
               Каталог продукции
-            </a>
+          </a>
           </li>
           <li class="main-nav__item main-nav__item--active">
-            <a>
+            <a class="main-nav__item-link">
               Подбор программы
             </a>
           </li>
@@ -49,23 +50,23 @@
             <legend class="visually-hidden">
               Данные кота
             </legend>
-            <label class="order__input-text input-text">
+            <label class="order__field-text field-text">
               <span>
                 Имя:*
               </span>
-              <input type="text" name="name" placeholder="Барсик" required>
+              <input class="field-text__input" type="text" name="name" placeholder="Барсик" required>
             </label>
-            <label class="order__input-text input-text">
+            <label class="order__field-text field-text">
               <span>
                 Вес (кг):*
               </span>
-              <input type="text" name="weight" placeholder="7" required>
+              <input class="field-text__input" type="text" name="weight" placeholder="7" required>
             </label>
-            <label class="order__input-text input-text">
+            <label class="order__field-text field-text">
               <span>
                 Возраст (лет):
               </span>
-              <input type="text" name="age" placeholder="7">
+              <input class="field-text__input" type="text" name="age" placeholder="7">
             </label>
           </fieldset>
           <fieldset class="order__goal">
@@ -73,19 +74,19 @@
               Цель программы
             </legend>
             <label class="choice order__choice">
-              <input type="radio" name="goal" value="slimming" checked>
+              <input class="choice__radio" type="radio" name="goal" value="slimming" checked>
               <span>
                 Похудение
               </span>
             </label>
             <label class="choice order__choice">
-              <input type="radio" name="goal" value="weight-gain">
+              <input class="choice__radio" type="radio" name="goal" value="weight-gain">
               <span>
                 Набор массы
               </span>
             </label>
             <label class="choice order__choice">
-              <input type="radio" name="goal" value="do-not-know">
+              <input class="choice__radio" type="radio" name="goal" value="do-not-know">
               <span>
                 Не знаю (нужен ваш совет)
               </span>
@@ -95,51 +96,51 @@
             <legend class="title-line order__contacts-title">
               Контактные данные (владельца кота)
             </legend>
-            <label class="order__contacts-text input-text order__contacts-email">
+            <label class="order__contacts-text field-text">
               <span>
                 E-mail:*
               </span>
-              <input type="email" name="email" placeholder="kuklachev@gmail.com" required>
+              <input class="field-text__input field-text__input--email" type="email" name="email" placeholder="kuklachev@gmail.com" required>
             </label>
-            <label class="order__contacts-text input-text order__contacts-phone">
+            <label class="order__contacts-text field-text">
               <span>
                 Телефон:*
               </span>
-              <input type="tel" name="phone" placeholder="8 (960) 900-60-90" required>
+              <input class="field-text__input field-text__input--phone" type="tel" name="phone" placeholder="8 (960) 900-60-90" required>
             </label>
           </fieldset>
           <fieldset class="order__comment">
             <legend class="title-line order__comment-title">
               Комментарий
             </legend>
-              <label class="order__comment-letter letter">
-                <textarea class="letter__textarea" cols="50" rows="8" placeholder="Расскажите обо всех повaдках кота"></textarea>
+              <label class="order__comment-letter">
+                <textarea class="order__comment-textarea" cols="50" rows="8" placeholder="Расскажите обо всех повaдках кота"></textarea>
               </label>
           </fieldset>
-          <fieldset class="order-more">
-            <legend class="title-line order-more__title">
+          <fieldset class="order__more">
+            <legend class="title-line order__more-title">
               Дополнительно
             </legend>
-            <label class="choice choice--checkbox order-more__choice">
-              <input type="checkbox" name="sweetener" checked>
+            <label class="choice choice--checkbox order__more-choice">
+              <input class="choice__checkbox" type="checkbox" name="sweetener" checked>
               <span>
                 Сахарозаменитель
               </span>
             </label>
-            <label class="choice choice--checkbox order-more__choice">
-              <input type="checkbox" name="water">
+            <label class="choice choice--checkbox order__more-choice">
+              <input class="choice__checkbox" type="checkbox" name="water">
               <span>
                 Питьевая вода
               </span>
             </label>
-            <label class="choice choice--checkbox order-more__choice">
-              <input type="checkbox" name="milk">
+            <label class="choice choice--checkbox order__more-choice">
+              <input class="choice__checkbox" type="checkbox" name="milk">
               <span>
                 Молоко
               </span>
             </label>
-            <label class="choice choice--checkbox order-more__choice">
-              <input type="checkbox" name="vitamins">
+            <label class="choice choice--checkbox order__more-choice">
+              <input class="choice__checkbox" type="checkbox" name="vitamins">
               <span>
                 Витамины
               </span>
@@ -157,16 +158,16 @@
   </main>
   <footer class="page-footer">
     <div class="page-footer__wrapper">
-      <section class="page-footer__contacts contacts">
+      <section class="page-footer__contacts contacts contacts--form">
         <h2 class="visually-hidden">
           Контакты
         </h2>
         <p class="contacts__dealers-text">
-          Приглашаем к сотрудничеству дилеров!
+          Приглашаем<br>к сотрудничеству<br>дилеров!
         </p>
-        <p class="contacts__address-text">
+        <address class="contacts__address-text">
           ул. Большая<br>Конюшенная, д. 19/8<br>Санкт-Петербург
-        </p>
+        </address>
       </section>
       <section class="page-footer__map map">
         <h2 class="visually-hidden">Карта проезда</h2>
@@ -174,23 +175,23 @@
       </section>
       <section class="socials">
         <h2 class="visually-hidden">Полезные ссылки</h2>
-        <img src="./img/logo-text-mobile.svg" width="101" height="18" alt="название компании Cat Energy">
-        <ul class="social-list">
-          <li class="social-list__item social-item">
-            <a class="social-item__link" href="#"></a>
+        <img class="socials__text-logo" src="./img/logo-text-mobile.svg" width="101" height="18" alt="название компании Cat Energy">
+        <ul class="socials__list">
+          <li class="socials__item">
+            <a class="socials__item-link socials__item-link--vk" href="#"></a>
           </li>
-          <li class="social-list__item social-item">
-            <a class="social-item__link" href="#"></a>
+          <li class="socials__item">
+            <a class="socials__item-link socials__item-link--inst" href="#"></a>
           </li>
-          <li class="social-list__item social-item">
-            <a class="social-item__link" href="#"></a>
+          <li class="socials__item">
+            <a class="socials__item-link socials__item-link--facebook" href="#"></a>
           </li>
         </ul>
-        <div class="socials__html-academy html-academy">
-          <a class="html-academy__link" href="https://htmlacademy.ru/intensive/adaptive">
+        <div class="socials__html-academy">
+          <a class="socials__html-academy-link" href="https://htmlacademy.ru/intensive/adaptive">
             HTML Academy
           </a>
-          <a class="html-academy__logo" href="https://htmlacademy.ru/intensive/adaptive"></a>
+          <a class="socials__html-academy-logo" href="https://htmlacademy.ru/intensive/adaptive"></a>
         </div>
       </section>
     </div>
