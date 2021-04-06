@@ -4,6 +4,11 @@
 
 .main-nav__item {
   text-align: center;
+  border-top: 1px solid var(--basik-light-dark);
+
+  &:last-child {
+    border-bottom: 1px solid var(--basik-light-dark);
+  }
 }
 
 .main-nav__item-link {
@@ -14,4 +19,15 @@
   text-transform: uppercase;
   padding: 20px 0;
   display: block;
+}
+
+.main-nav__toggle {
+  background-image: url("../img/icons/icon-close.svg");
+  background-color: var(--basik-white);
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+  border: none;
+  outline: none;
+  cursor: pointer;
 }

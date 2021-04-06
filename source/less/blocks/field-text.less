@@ -1,0 +1,37 @@
+.field-text {
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--basik-grey);
+}
+
+.field-text__input {
+  font-family: @font-oswald-arial;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: var(--basik-grey);
+  border: 1px solid var(--basik-light-black);
+  padding: 13px 40px 14px 15px;
+  margin-bottom: 13px;
+  background-repeat: no-repeat;
+
+  &--email {
+    background-image: url("../img/icons/icon-email.svg");
+    background-position: 95% 50%;
+  }
+
+  &--phone {
+    background-image: url("../img/icons/icon-phone.svg");
+    background-position: 95% 50%;
+  }
+
+  &::placeholder {
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--basik-grey);
+  }
+}
