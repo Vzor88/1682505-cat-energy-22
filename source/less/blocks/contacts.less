@@ -1,9 +1,15 @@
 .contacts {
-  padding: 28px 19px;
+  padding: 28px 20px;
 
   &--form {
     background-color: var(--basik-light-grey);
   }
+}
+
+.contacts__wrapper {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
 }
 
 .contacts__dealers-text {
@@ -19,4 +25,48 @@
   font-style: normal;
   line-height: 20px;
   color: var(--basik-grey);
+}
+
+.contacts__address-text p {
+  margin: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .contacts__wrapper {
+    width: 708px;
+    padding: 0 30px;
+  }
+
+  .contacts__dealers-text {
+    font-size: 20px;
+    line-height: 21px;
+  }
+
+  .contacts__address-text {
+    font-size: 16px;
+    text-align: end;
+  }
+
+  .contacts__address-text p {
+    margin-top: 10px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .contacts {
+    width: 570px;
+    height: 201px;
+    padding: 62px 89px 51px 76px;
+    position: absolute;
+    left: 110px;
+    top: 95px;
+    z-index: 2;
+    box-sizing: border-box;
+    background-color: var(--basik-white);
+  }
+
+  .contacts__wrapper {
+    width: 100%;
+    padding: 0;
+  }
 }

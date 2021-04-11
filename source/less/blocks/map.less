@@ -1,3 +1,73 @@
 .map {
-  margin: 0;
+  position: relative;
+  margin: 0 auto;
+
+  /* Это изображение на карте, не уверен надо ли оно, ведь в iframe есть значок местоположения
+  &::before {
+    content: "";
+    background-image: url("../img/map-pin.png.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    left: 150px;
+    top: 150px;
+    width: 57px;
+    height: 53px;
+    z-index: 2;
+  }
+  */
+}
+
+.map__wrapper {
+  position: relative;
+}
+
+.map__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.map__iframe {
+  width: 100%;
+  border: none;
+}
+
+
+@media (min-width: @tablet-width) {
+  /*
+  .map {
+
+    &::before {
+      left: 500px;
+      top: 110px;
+      width: 113px;
+      height: 106px;
+    }
+  }
+*/
+  .map__image {
+    width: 768px;
+    height: 400px;
+  }
+
+  .map__iframe {
+    height: 400px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  /*
+  .map {
+
+    &::before {
+      left: 900px;
+      top: 110px;
+    }
+  }
+*/
+  .map__image {
+    width: 1440px;
+  }
 }
