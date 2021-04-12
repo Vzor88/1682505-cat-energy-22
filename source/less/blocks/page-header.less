@@ -3,6 +3,10 @@
   flex-direction: column;
 }
 
+.page-header__wrapper {
+  border-bottom: 1px solid var(--basik-light-dark);
+}
+
 .page-header__logo {
   width: 175px;
   margin-left: 24px;
@@ -20,6 +24,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    border-bottom: none;
   }
 
   .page-header__logo {
@@ -33,6 +38,10 @@
   .page-header {
     padding-top: 53px;
     background-image: linear-gradient(to right, var(--basik-white), var(--basik-white) 50%, var(--basik-transparent-green) 50%, var(--basik-transparent-green));
+
+    &--form {
+      background-image: none;
+    }
   }
 
   .page-header__wrapper {

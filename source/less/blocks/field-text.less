@@ -1,11 +1,19 @@
 .field-text {
+  display: flex;
+  align-items: baseline;
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
   color: var(--basik-grey);
 }
 
+.field-text__content {
+  margin: 0 15px 0 0;
+}
+
 .field-text__input {
+  flex: 1 1 auto;
+  width: 1px;
   font-family: @font-oswald-arial;
   font-size: 16px;
   line-height: 18px;
@@ -33,5 +41,26 @@
     font-weight: 400;
     text-transform: uppercase;
     color: var(--basik-grey);
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .field-text {
+    font-size: 20px;
+    line-height: 30px;
+
+    &:last-child .field-text__input {
+      margin-bottom: 0;
+    }
+  }
+
+  .field-text__input {
+    font-size: 20px;
+    line-height: 30px;
+
+    &::placeholder {
+      font-size: 20px;
+      line-height: 30px;
+    }
   }
 }

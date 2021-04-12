@@ -2,11 +2,12 @@
 <html class="page" lang="ru">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Форма подбора питания интернет-магазина "кэт энерджи"</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page-body">
-  <header class="page-header">
+  <header class="page-header page-header--form">
     <div class="page-header__wrapper">
       <a href="index.html" class="page-header__logo">
         <img src="img/logo-mobile.svg" width="190" height="38" alt="логотип интернет магазина 'кэт энерджи'">
@@ -17,17 +18,17 @@
         </button>
         <ul class="main-nav__list">
           <li class="main-nav__item">
-            <a class="main-nav__item-link" href="index.html">
+            <a class="main-nav__item-link main-nav__item-link--form" href="index.html">
               Главная
             </a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__item-link" href="catalog.html">
+            <a class="main-nav__item-link main-nav__item-link--form" href="catalog.html">
               Каталог продукции
           </a>
           </li>
-          <li class="main-nav__item main-nav__item--active">
-            <a class="main-nav__item-link">
+          <li class="main-nav__item main-nav__item--active main-nav__item--form-active">
+            <a class="main-nav__item-link main-nav__item-link--form">
               Подбор программы
             </a>
           </li>
@@ -51,19 +52,19 @@
               Данные кота
             </legend>
             <label class="order__field-text field-text">
-              <span>
+              <span class="field-text__content">
                 Имя:*
               </span>
               <input class="field-text__input" type="text" name="name" placeholder="Барсик" required>
             </label>
             <label class="order__field-text field-text">
-              <span>
+              <span class="field-text__content">
                 Вес (кг):*
               </span>
               <input class="field-text__input" type="text" name="weight" placeholder="7" required>
             </label>
             <label class="order__field-text field-text">
-              <span>
+              <span class="field-text__content">
                 Возраст (лет):
               </span>
               <input class="field-text__input" type="text" name="age" placeholder="7">
@@ -92,33 +93,33 @@
               </span>
             </label>
           </fieldset>
-          <fieldset class="order__contacts">
-            <legend class="title-line order__contacts-title">
+          <fieldset class="order__contacts order__line-green">
+            <legend class="order__contacts-title order__subtitle">
               Контактные данные (владельца кота)
             </legend>
             <label class="order__contacts-text field-text">
-              <span>
+              <span class="field-text__content">
                 E-mail:*
               </span>
               <input class="field-text__input field-text__input--email" type="email" name="email" placeholder="kuklachev@gmail.com" required>
             </label>
             <label class="order__contacts-text field-text">
-              <span>
+              <span class="field-text__content">
                 Телефон:*
               </span>
               <input class="field-text__input field-text__input--phone" type="tel" name="phone" placeholder="8 (960) 900-60-90" required>
             </label>
           </fieldset>
-          <fieldset class="order__comment">
-            <legend class="title-line order__comment-title">
+          <fieldset class="order__comment order__line-green">
+            <legend class="order__comment-title order__subtitle">
               Комментарий
             </legend>
               <label class="order__comment-letter">
-                <textarea class="order__comment-textarea" cols="50" rows="8" placeholder="Расскажите обо всех повaдках кота"></textarea>
+                <textarea class="order__comment-textarea" rows="8" placeholder="Расскажите обо всех повaдках кота"></textarea>
               </label>
           </fieldset>
-          <fieldset class="order__more">
-            <legend class="title-line order__more-title">
+          <fieldset class="order__more order__line-green">
+            <legend class="order__more-title order__subtitle">
               Дополнительно
             </legend>
             <label class="choice choice--checkbox order__more-choice">
@@ -146,12 +147,14 @@
               </span>
             </label>
           </fieldset>
-          <button class="button order__form-submit" type="submit">
-            Отправить заявку
-          </button>
-          <p class="order__form-required">
-            * — Обязательные поля
-          </p>
+          <div class="order__submit-wrapper">
+            <button class="button order__form-submit" type="submit">
+              Отправить заявку
+            </button>
+            <p class="order__form-required">
+              * — Обязательные поля
+            </p>
+          </div>
         </form>
       </div>
     </section>
@@ -159,21 +162,31 @@
   <footer class="page-footer">
     <div class="page-footer__wrapper">
       <section class="page-footer__contacts contacts contacts--form">
-        <h2 class="visually-hidden">
-          Контакты
-        </h2>
-        <p class="contacts__dealers-text">
-          Приглашаем<br>к сотрудничеству<br>дилеров!
-        </p>
-        <address class="contacts__address-text">
-          ул. Большая<br>Конюшенная, д. 19/8<br>Санкт-Петербург
-        </address>
+        <div class="contacts__wrapper">
+          <h2 class="visually-hidden">
+            Контакты
+          </h2>
+          <p class="contacts__dealers-text">
+            Приглашаем<br>к сотрудничеству<br>дилеров!
+          </p>
+          <address class="contacts__address-text">
+            ул. Большая<br>Конюшенная, д. 19/8
+            <p>
+              Санкт-Петербург
+            </p>
+          </address>
+        </div>
       </section>
       <section class="page-footer__map map">
-        <h2 class="visually-hidden">Карта проезда</h2>
-        <img class="map__image" width="320" height="362" src="./img/map.png" alt="изображение карты по ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
+        <div class="map__wrapper">
+          <h2 class="visually-hidden">Карта проезда</h2>
+          <iframe class="map__iframe" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1998.5121387638892!2d30.31724685819702!3d59.94023713227073!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1614435850237!5m2!1sru!2sru" width="320" height="362" allowfullscreen title="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></iframe>
+          <img class="map__image" width="320" height="362" src="./img/map.png" alt="изображение карты по ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
+        </div>
       </section>
-      <section class="socials">
+    </div>
+    <section class="socials">
+      <div class="socials__wrapper">
         <h2 class="visually-hidden">Полезные ссылки</h2>
         <img class="socials__text-logo" src="./img/logo-text-mobile.svg" width="101" height="18" alt="название компании Cat Energy">
         <ul class="socials__list">
@@ -193,8 +206,8 @@
           </a>
           <a class="socials__html-academy-logo" href="https://htmlacademy.ru/intensive/adaptive"></a>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
   </footer>
 </body>
 </html>
