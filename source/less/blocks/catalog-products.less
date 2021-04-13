@@ -4,11 +4,11 @@
 
 .catalog-products__title {
   margin: 0 0 41px 0;
+  padding-left: 20px;
 }
 
 .catalog-products__list {
   .clear-list;
-  margin-left: 20px;
 }
 
 .catalog-products__item {
@@ -20,12 +20,54 @@
   }
 }
 
+.catalog-products__item-wrapper {
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 160px 1fr;
+}
+
+.catalog-products__link {
+  position: relative;
+  grid-row: span 2;
+}
+
+.catalog-products__link-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate (-50% -50%);
+
+  &--chicken-500 {
+    width: 68px;
+    height: 86px;
+  }
+
+  &--chicken-1000,
+  &--fish-1000,
+  &--buckwheat-1000 {
+    width: 84px;
+    height: 101px;
+  }
+
+  &--fish-500,
+  &--buckwheat-500 {
+    width: 68px;
+    height: 78px;
+  }
+
+  &--rice-500 {
+    width: 72px;
+    height: 84px;
+  }
+}
+
 .catalog-products__title-link {
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
   text-transform: uppercase;
   color: var(--basik-neitral-black);
+  width: 76px;
 }
 
 .catalog-products__table-data {
@@ -37,7 +79,86 @@
   margin-bottom: 22px;
 }
 
+.catalog-products__table-value {
+  .table-string-end;
+}
+
 .catalog-products__button {
   padding: 10px 109px;
   margin-bottom: 25px;
+  grid-column-start: 1;
+  grid-column-end: -1;
+}
+
+@media (min-width: @tablet-width) {
+  .catalog-products__wrapper {
+    width: 708px;
+    padding: 0 30px;
+    margin: 0 auto;
+  }
+
+  .catalog-products__title {
+    padding-left: 0;
+    margin-bottom: 164px;
+  }
+
+  .catalog-products__list {
+    display: grid;
+    grid-template-columns: 324px 324px;
+    grid-column-gap: 60px;
+    grid-row-gap: 140px;
+  }
+
+  .catalog-products__item {
+    padding-top: 0;
+    border: none;
+  }
+
+  .catalog-products__item-wrapper {
+    background-color: var(--basik-light-grey);
+    padding: 161px 37px 40px 39px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .catalog-products__button {
+    margin-bottom: 0;
+    padding: 9.5px 93px;
+    font-size: 16px;
+  }
+
+  .catalog-products__link {
+    position: static;
+  }
+
+  .catalog-products__link-image {
+    top: 15px;
+    width: fit-content;
+    height: fit-content;
+  }
+
+  .catalog-products__link-text {
+    align-self: center;
+  }
+
+  .catalog-products__title-link {
+    width: 155px;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+  }
+
+  .catalog-products__table-data {
+    font-size: 16px;
+    border-collapse: collapse;
+  }
+
+  .catalog-products__table-string {
+    border-bottom: 1px solid var(--basik-dark-grey);
+  }
+
+  .catalog-products__table-value {
+    padding: 7px 0;
+  }
 }
