@@ -4,6 +4,12 @@
 
 .main-nav__list {
   .clear-list;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
 }
 
 .main-nav__item {
@@ -12,6 +18,25 @@
 
   &:last-child {
     margin-right: 0;
+  }
+
+  @media (min-width: @tablet-width) {
+    border: none;
+    margin-right: 35px;
+
+    &--active {
+      border-bottom: 2px solid var(--basik-green);
+
+      @media (min-width: @desktop-width) {
+        border-bottom: 2px solid var(--basik-white);
+      }
+    }
+
+    &--form-active {
+      @media (min-width: @desktop-width) {
+        border-bottom: 2px solid var(--basik-green);
+      }
+    }
   }
 }
 
@@ -23,6 +48,26 @@
   text-transform: uppercase;
   padding: 20px 0;
   display: block;
+
+  @media (min-width: @tablet-width) {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+    padding: 0 0 10px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 20px;
+    line-height: 30px;
+    padding: 0 0 8px 0;
+    color: var(--basik-white);
+  }
+
+  &--form {
+    @media (min-width: @desktop-width) {
+      color: var(--basik-black);
+    }
+  }
 }
 
 .main-nav__toggle {
@@ -37,59 +82,8 @@
   position: absolute;
   right: 24px;
   top: -30px;
-}
 
-@media (min-width: @tablet-width) {
-  .main-nav__toggle {
+  @media (min-width: @tablet-width) {
     display: none;
-  }
-
-  .main-nav__list {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 10px;
-  }
-
-  .main-nav__item {
-    border: none;
-    margin-right: 35px;
-
-    &:last-child {
-      margin-right: 0;
-    }
-
-    &--active {
-      border-bottom: 2px solid var(--basik-green);
-    }
-  }
-
-  .main-nav__item-link {
-    font-size: 18px;
-    line-height: 24px;
-    font-weight: 400;
-    padding: 0 0 10px 0;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .main-nav__item {
-    &--active {
-      border-bottom: 2px solid var(--basik-white);
-    }
-
-    &--form-active {
-      border-bottom: 2px solid var(--basik-green);
-    }
-  }
-
-  .main-nav__item-link {
-    font-size: 20px;
-    line-height: 30px;
-    padding: 0 0 8px 0;
-    color: var(--basik-white);
-
-    &--form {
-      color: var(--basik-tru-black);
-    }
   }
 }

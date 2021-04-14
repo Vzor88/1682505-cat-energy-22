@@ -22,8 +22,8 @@
               Главная
             </a>
           </li>
-          <li class="main-nav__item">
-            <a class="main-nav__item-link main-nav__item--active main-nav__item--form-active">
+          <li class="main-nav__item main-nav__item--active main-nav__item--form-active">
+            <a class="main-nav__item-link main-nav__item-link--form">
               Каталог продукции
             </a>
           </li>
@@ -262,64 +262,72 @@
         </ul>
       </div>
     </section>
-    <section class="products-more">
-      <div class=" order__line-green products-more__wrapper">
-        <h2 class=" order__subtitle products-more__title">
+    <section class="products-more products-more__line-green">
+      <div class="products-more__wrapper">
+        <h2 class="order__subtitle products-more__title">
           Дополнительные товары
         </h2>
         <ul class="products-more__list">
           <li class="products-more__item">
-            <h3 class="products-more__item-subtitle">
-              Сахарозаменитель
-            </h3>
-            <table class="products-more__item-table">
-              <tr>
-                <td>1 упаковка (100 г)</td>
-                <td class="products-more__item-value">200 Р.</td>
-              </tr>
-            </table>
+            <div class="products-more__item-wrapper">
+              <h3 class="products-more__item-subtitle">
+                Сахарозаменитель
+              </h3>
+              <table class="products-more__item-table">
+                <tr>
+                  <td>1 упаковка (100 г)</td>
+                  <td class="products-more__item-value">200 Р.</td>
+                </tr>
+              </table>
+            </div>
             <a class="button products-more__item-button" href="form.html">
               Заказать
             </a>
           </li>
           <li class="products-more__item">
-            <h3 class="products-more__item-subtitle">
-              Питьевая вода
-            </h3>
-            <table class="products-more__item-table">
-              <tr>
-                <td>5 литров</td>
-                <td class="products-more__item-value">50 Р.</td>
-              </tr>
-            </table>
+            <div class="products-more__item-wrapper">
+              <h3 class="products-more__item-subtitle">
+                Питьевая вода
+              </h3>
+              <table class="products-more__item-table">
+                <tr>
+                  <td>5 литров</td>
+                  <td class="products-more__item-value">50 Р.</td>
+                </tr>
+              </table>
+            </div>
             <a class="button products-more__item-button" href="form.html">
               Заказать
             </a>
           </li>
           <li class="products-more__item">
-            <h3 class="products-more__item-subtitle">
-              Молоко
-            </h3>
-            <table class="products-more__item-table">
-              <tr>
-                <td>1 литр</td>
-                <td class="products-more__item-value">100 Р.</td>
-              </tr>
-            </table>
+            <div class="products-more__item-wrapper">
+              <h3 class="products-more__item-subtitle">
+                Молоко
+              </h3>
+              <table class="products-more__item-table">
+                <tr>
+                  <td>1 литр</td>
+                  <td class="products-more__item-value">100 Р.</td>
+                </tr>
+              </table>
+            </div>
             <a class="button products-more__item-button" href="form.html">
               Заказать
             </a>
           </li>
           <li class="products-more__item">
-            <h3 class="products-more__item-subtitle">
-              Витамины
-            </h3>
-            <table class="products-more__item-table">
-              <tr>
-                <td>1 упаковка (30 г)</td>
-                <td class="products-more__item-value">300 Р.</td>
-              </tr>
-            </table>
+            <div class="products-more__item-wrapper">
+              <h3 class="products-more__item-subtitle">
+                Витамины
+              </h3>
+              <table class="products-more__item-table">
+                <tr>
+                  <td>1 упаковка (30 г)</td>
+                  <td class="products-more__item-value">300 Р.</td>
+                </tr>
+              </table>
+            </div>
             <a class="button products-more__item-button" href="form.html">
               Заказать
             </a>
@@ -332,6 +340,7 @@
         <h2 class="visually-hidden">
           Промоакция
         </h2>
+        <div class="promo-stock__gift"></div>
         <p class="promo-stock__text">
           Закажите все<br>
           и получите чехол для<br>
@@ -362,7 +371,10 @@
         <div class="map__wrapper">
           <h2 class="visually-hidden">Карта проезда</h2>
           <iframe class="map__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5872818432135!2d30.3224502974022!3d59.938990344725475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1618328054067!5m2!1sru!2sru" width="320" height="362" allowfullscreen="" title="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></iframe>
-          <!-- <img class="map__image" width="320" height="362" src="./img/map.png" alt="изображение карты по ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">-->
+          <div class="map__static-image">
+            <img class="map__image" width="320" height="362" src="./img/map.png" alt="изображение карты по ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
+            <img class="map__image-point" width="57" height="53" src="img/map-point.png" alt="Местоположение на карте адреса ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
+          </div>
         </div>
       </section>
     </div>

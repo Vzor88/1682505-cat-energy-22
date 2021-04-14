@@ -2,15 +2,31 @@
   padding-top: 22px;
 }
 
-.programs__list {
-  .clear-list;
-}
-
 .programs__wrapper {
   margin: 0 auto;
   padding: 0 20px;
   display: flex;
   flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    width: 708px;
+    padding: 0 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1220px;
+    padding: 0 110px;
+  }
+}
+
+.programs__list {
+  .clear-list;
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 80px;
+  }
 }
 
 .programs__item {
@@ -19,6 +35,15 @@
   padding: 30px 20px 22px 19px;
   margin-bottom: 20px;
   background: var(--basik-light-grey);
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: auto 1fr 290px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: auto 1fr;
+    margin: 0;
+  }
 
   &:last-child {
     margin-bottom: 0;
@@ -31,6 +56,21 @@
   background-color: var(--basik-green);
   border-radius: 50%;
   position: relative;
+
+  @media (min-width: @tablet-width) {
+    width: 200px;
+    height: 200px;
+    grid-row: span 4;
+    grid-column-start: 3;
+    margin-left: 17px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100px;
+    height: 100px;
+    grid-row-start: 1;
+    grid-column: 1;
+  }
 
   &::before {
     content: "";
@@ -46,15 +86,39 @@
       width: 36px;
       left: 11px;
       top: 2px;
+
+      @media (min-width: @tablet-width) {
+        width: 140px;
+      }
+
+      @media (min-width: @desktop-width) {
+        width: 70px;
+      }
     }
   }
 
   &--pro {
+    @media (min-width: @tablet-width) {
+      margin-left: 54px;
+    }
+
     &::before {
       background-image: url("../img/icons/cat-pro.svg");
       width: 67px;
       left: -5px;
       top: 15px;
+
+      @media (min-width: @tablet-width) {
+        width: 268px;
+        left: -50px;
+        top: 40px;
+      }
+
+      @media (min-width: @desktop-width) {
+        width: 134px;
+        left: -20px;
+        top: 20px;
+      }
     }
   }
 }
@@ -65,6 +129,11 @@
   text-transform: uppercase;
   margin: 0 0 29px 20px;
   font-weight: 400;
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
 .programs__item-text {
@@ -74,6 +143,12 @@
   padding-bottom: 23px;
   border-bottom: 1px solid var(--basik-medium-grey);
   grid-column: span 2;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+    border: none;
+  }
 }
 
 .programs__item-link {
@@ -83,108 +158,14 @@
   color: var(--basik-black);
   position: relative;
 
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
   &::before {
     content: url("../img/icons/icon-arrow.svg");
     position: absolute;
     right: -50px;
-  }
-}
-
-@media (min-width: @tablet-width) {
-  .programs__wrapper {
-    width: 708px;
-    padding: 0 30px;
-  }
-
-  .programs__item {
-    grid-template-columns: auto 1fr 290px;
-  }
-
-  .programs__item-image {
-    width: 200px;
-    height: 200px;
-    grid-row: span 4;
-    grid-column-start: 3;
-    margin-left: 17px;
-
-    &--slim {
-      &::before {
-        width: 140px;
-        left: 11px;
-        top: 2px;
-      }
-    }
-
-    &--pro {
-      margin-left: 54px;
-
-      &::before {
-        width: 268px;
-        left: -50px;
-        top: 40px;
-      }
-    }
-  }
-
-  .programs__item-title {
-    font-size: 36px;
-    line-height: 36px;
-  }
-
-  .programs__item-text {
-    font-size: 16px;
-    line-height: 24px;
-    border: none;
-  }
-
-  .programs__item-link {
-    font-size: 20px;
-    line-height: 30px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .programs__wrapper {
-    width: 1220px;
-    padding: 0 110px;
-  }
-
-  .programs__list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 80px;
-  }
-
-  .programs__item {
-    grid-template-columns: auto 1fr;
-    margin: 0;
-  }
-
-  .programs__item-image {
-    width: 100px;
-    height: 100px;
-    margin-left: 17px;
-    grid-row-start: 1;
-    grid-column: 1;
-
-    &--slim {
-      &::before {
-        width: 70px;
-        left: 11px;
-        top: 2px;
-      }
-    }
-
-    &--pro {
-      &::before {
-        width: 134px;
-        left: -20px;
-        top: 20px;
-      }
-    }
-  }
-
-  .programs__item-text {
-    grid-column: span 2;
   }
 }
