@@ -6,6 +6,11 @@
   margin-bottom: 19px;
   display: block;
 
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
   &--checkbox {
     color: var(--basik-black);
   }
@@ -18,11 +23,4 @@
 .choice__radio,
 .choice__checkbox {
   margin-right: 16px;
-}
-
-@media (min-width: @tablet-width) {
-  .choice {
-    font-size: 20px;
-    line-height: 30px;
-  }
 }
