@@ -1,6 +1,18 @@
 .contacts {
   padding: 28px 20px;
 
+  @media (min-width: @desktop-width) {
+    width: 570px;
+    height: 201px;
+    padding: 62px 89px 51px 76px;
+    position: absolute;
+    left: 110px;
+    top: 95px;
+    z-index: 4;
+    box-sizing: border-box;
+    background-color: var(--basik-white);
+  }
+
   &--form {
     background-color: var(--basik-light-grey);
   }
@@ -10,6 +22,16 @@
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+
+  @media (min-width: @tablet-width) {
+    width: 708px;
+    padding: 0 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+    padding: 0;
+  }
 }
 
 .contacts__dealers-text {
@@ -18,6 +40,11 @@
   text-transform: uppercase;
   color: var(--basik-tru-black);
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 21px;
+  }
 }
 
 .contacts__address-text {
@@ -25,48 +52,13 @@
   font-style: normal;
   line-height: 20px;
   color: var(--basik-grey);
-}
 
-.contacts__address-text p {
-  margin: 0;
-}
-
-@media (min-width: @tablet-width) {
-  .contacts__wrapper {
-    width: 708px;
-    padding: 0 30px;
-  }
-
-  .contacts__dealers-text {
-    font-size: 20px;
-    line-height: 21px;
-  }
-
-  .contacts__address-text {
+  @media (min-width: @tablet-width) {
     font-size: 16px;
     text-align: end;
   }
 
-  .contacts__address-text p {
-    margin-top: 10px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .contacts {
-    width: 570px;
-    height: 201px;
-    padding: 62px 89px 51px 76px;
-    position: absolute;
-    left: 110px;
-    top: 95px;
-    z-index: 2;
-    box-sizing: border-box;
-    background-color: var(--basik-white);
-  }
-
-  .contacts__wrapper {
-    width: 100%;
-    padding: 0;
+  & p {
+    margin: 10px 0 0 0;
   }
 }
