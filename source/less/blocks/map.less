@@ -1,3 +1,73 @@
 .map {
-  margin: 0;
+  position: relative;
+  margin: 0 auto;
+}
+
+.map__wrapper {
+  background-color: var(--basik-light-grey);
+}
+
+.map__static-image {
+  position: relative;
+  width: 320px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1440px;
+  }
+}
+
+.map__image-point {
+  content: "";
+  background-image: url("../img/map-point.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  left: 150px;
+  top: 150px;
+  width: 57px;
+  height: 53px;
+  z-index: 2;
+
+  @media (min-width: @tablet-width) {
+    left: 500px;
+    top: 110px;
+    width: 113px;
+    height: 106px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 900px;
+  }
+}
+
+.map__image {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+    height: 400px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1440px;
+  }
+}
+
+.map__iframe {
+  width: 100%;
+  border: none;
+  position: absolute;
+  z-index: 3;
+
+  @media (min-width: @tablet-width) {
+    height: 400px;
+  }
 }

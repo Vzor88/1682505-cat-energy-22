@@ -1,5 +1,25 @@
 .description {
   margin-bottom: 42px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    padding-top: 71px;
+  }
+}
+
+.description__wrapper {
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @media (min-width: @tablet-width) {
+    width: 708px;
+    padding: 0 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1220px;
+    padding: 0 110px;
+  }
 }
 
 .description__title {
@@ -8,15 +28,42 @@
   font-weight: 400;
   margin: 27px 0 38px 20px;
   padding: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    margin: 0 0 72px 0;
+  }
 }
 
 .description__list {
   .clear-list;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    counter-reset: num;
+  }
 }
 
 .description__item {
   position: relative;
-  margin-left: 100px;
+  padding-left: 80px;
+  min-height: 60px;
+
+  @media (min-width: @tablet-width) {
+    width: 50%;
+    margin: 0;
+    box-sizing: border-box;
+    padding-bottom: 130px;
+    padding-left: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 245px;
+  }
+
 
   &::before {
     content: "";
@@ -26,7 +73,12 @@
     background-repeat: no-repeat;
     background-position: center;
     position: absolute;
-    left: -80px;
+    left: 0;
+
+    @media (min-width: @tablet-width) {
+      width: 80px;
+      height: 80px;
+    }
   }
 
   &--sheet {
@@ -52,9 +104,33 @@
       background-image: url("../img/icons/icon-time.svg");
     }
   }
+
+  @media (min-width: @tablet-width) {
+    &::after {
+      content: counter(num);
+      counter-increment: num;
+      position: absolute;
+      top: -30px;
+      right: 94px;
+      color: var(--basik-light-grey);
+      font-size: 280px;
+      line-height: 280px;
+      font-weight: 400;
+      z-index: -1;
+
+      @media (min-width: @desktop-width) {
+        right: 10px;
+      }
+    }
+  }
 }
 
 .description__item-text {
   font-family: @font-arial;
   color: var(--basik-grey);
+
+  @media (min-width: @tablet-width) {
+    padding-top: 91px;
+    margin: 0;
+  }
 }
