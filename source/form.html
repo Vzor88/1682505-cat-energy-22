@@ -97,55 +97,61 @@
             <legend class="order__contacts-title order__subtitle">
               Контактные данные (владельца кота)
             </legend>
-            <label class="order__contacts-text field-text">
+            <div class="order__fieldset-wrapper">
+              <label class="order__contacts-text field-text">
               <span class="field-text__content">
                 E-mail:*
               </span>
-              <input class="field-text__input field-text__input--email" type="email" name="email" placeholder="kuklachev@gmail.com" required>
-            </label>
-            <label class="order__contacts-text field-text">
+                <input class="field-text__input field-text__input--email" type="email" name="email" placeholder="kuklachev@gmail.com" required>
+              </label>
+              <label class="order__contacts-text field-text">
               <span class="field-text__content">
                 Телефон:*
               </span>
-              <input class="field-text__input field-text__input--phone" type="tel" name="phone" placeholder="8 (960) 900-60-90" required>
-            </label>
+                <input class="field-text__input field-text__input--phone" type="tel" name="phone" placeholder="8 (960) 900-60-90" required>
+              </label>
+            </div>
           </fieldset>
           <fieldset class="order__comment order__line-green">
             <legend class="order__comment-title order__subtitle">
               Комментарий
             </legend>
+            <div class="order__fieldset-wrapper">
               <label class="order__comment-letter">
                 <textarea class="order__comment-textarea" rows="8" placeholder="Расскажите обо всех повaдках кота"></textarea>
               </label>
+            </div>
           </fieldset>
           <fieldset class="order__more order__line-green">
             <legend class="order__more-title order__subtitle">
               Дополнительно
             </legend>
-            <label class="choice choice--checkbox order__more-choice">
-              <input class="choice__checkbox" type="checkbox" name="sweetener" checked>
-              <span>
+            <div class="order__fieldset-wrapper order__more-wrapper">
+              <label class="choice choice--checkbox order__more-choice">
+                <input class="choice__checkbox" type="checkbox" name="sweetener" checked>
+                <span>
                 Сахарозаменитель
               </span>
-            </label>
-            <label class="choice choice--checkbox order__more-choice">
-              <input class="choice__checkbox" type="checkbox" name="water">
-              <span>
+              </label>
+              <label class="choice choice--checkbox order__more-choice">
+                <input class="choice__checkbox" type="checkbox" name="water">
+                <span>
                 Питьевая вода
               </span>
-            </label>
-            <label class="choice choice--checkbox order__more-choice">
-              <input class="choice__checkbox" type="checkbox" name="milk">
-              <span>
+              </label>
+              <label class="choice choice--checkbox order__more-choice">
+                <input class="choice__checkbox" type="checkbox" name="milk">
+                <span>
                 Молоко
               </span>
-            </label>
-            <label class="choice choice--checkbox order__more-choice">
-              <input class="choice__checkbox" type="checkbox" name="vitamins">
-              <span>
+              </label>
+              <label class="choice choice--checkbox order__more-choice">
+                <input class="choice__checkbox" type="checkbox" name="vitamins">
+                <span>
                 Витамины
               </span>
-            </label>
+              </label>
+            </div>
           </fieldset>
           <div class="order__submit-wrapper">
             <button class="button order__form-submit" type="submit">
