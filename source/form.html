@@ -46,123 +46,117 @@
           Заполните анкету, и мы подберем<br>
           программу питания для вашего кота
         </p>
-        <form class="order__form" action="https://echo.htmlacademy.ru" method="post">
+      </div>
+      <form class="order__form" action="https://echo.htmlacademy.ru" method="post">
+        <div class="order__joint-wrapper">
           <fieldset class="order__cat-data">
             <legend class="visually-hidden">
               Данные кота
             </legend>
-            <label class="order__field-text field-text">
+            <div class="order__fieldset-container">
+              <label class="order__field-text field-text">
               <span class="field-text__content">
                 Имя:*
               </span>
-              <input class="field-text__input" type="text" name="name" placeholder="Барсик" required>
-            </label>
-            <label class="order__field-text field-text">
+                <input class="field-text__input" type="text" name="name" placeholder="Барсик" required>
+              </label>
+              <label class="order__field-text field-text">
               <span class="field-text__content">
                 Вес (кг):*
               </span>
-              <input class="field-text__input" type="text" name="weight" placeholder="7" required>
-            </label>
-            <label class="order__field-text field-text">
+                <input class="field-text__input" type="text" name="weight" placeholder="7" required>
+              </label>
+              <label class="order__field-text field-text">
               <span class="field-text__content">
                 Возраст (лет):
               </span>
-              <input class="field-text__input" type="text" name="age" placeholder="7">
-            </label>
+                <input class="field-text__input" type="text" name="age" placeholder="7">
+              </label>
+            </div>
           </fieldset>
           <fieldset class="order__goal">
             <legend class="visually-hidden">
               Цель программы
             </legend>
-            <label class="choice order__choice">
-              <input class="choice__radio" type="radio" name="goal" value="slimming" checked>
-              <span>
-                Похудение
-              </span>
-            </label>
-            <label class="choice order__choice">
-              <input class="choice__radio" type="radio" name="goal" value="weight-gain">
-              <span>
-                Набор массы
-              </span>
-            </label>
-            <label class="choice order__choice">
-              <input class="choice__radio" type="radio" name="goal" value="do-not-know">
-              <span>
-                Не знаю (нужен ваш совет)
-              </span>
-            </label>
+            <div class="order__fieldset-container">
+              <label class="choice order__choice">
+                <input class="choice__radio" type="radio" name="goal" value="slimming" checked>
+                <span>Похудение</span>
+              </label>
+              <label class="choice order__choice">
+                <input class="choice__radio" type="radio" name="goal" value="weight-gain">
+                <span>Набор массы</span>
+              </label>
+              <label class="choice order__choice">
+                <input class="choice__radio" type="radio" name="goal" value="do-not-know">
+                <span>Не знаю (нужен ваш совет)</span>
+              </label>
+            </div>
           </fieldset>
-          <fieldset class="order__contacts order__line-green">
+        </div>
+        <div class="order__contacts order__line-green">
+          <fieldset class="order__fieldset">
             <legend class="order__contacts-title order__subtitle">
               Контактные данные (владельца кота)
             </legend>
-            <div class="order__fieldset-wrapper">
-              <label class="order__contacts-text field-text">
+            <label class="order__contacts-text field-text">
               <span class="field-text__content">
                 E-mail:*
               </span>
-                <input class="field-text__input field-text__input--email" type="email" name="email" placeholder="kuklachev@gmail.com" required>
-              </label>
-              <label class="order__contacts-text field-text">
+              <input class="field-text__input field-text__input--email" type="email" name="email" placeholder="kuklachev@gmail.com" required>
+            </label>
+            <label class="order__contacts-text field-text">
               <span class="field-text__content">
                 Телефон:*
               </span>
-                <input class="field-text__input field-text__input--phone" type="tel" name="phone" placeholder="8 (960) 900-60-90" required>
-              </label>
-            </div>
+              <input class="field-text__input field-text__input--phone" type="tel" name="phone" placeholder="8 (960) 900-60-90" required>
+            </label>
           </fieldset>
-          <fieldset class="order__comment order__line-green">
+        </div>
+        <div class="order__comment order__line-green">
+          <fieldset class="order__fieldset">
             <legend class="order__comment-title order__subtitle">
               Комментарий
             </legend>
-            <div class="order__fieldset-wrapper">
-              <label class="order__comment-letter">
-                <textarea class="order__comment-textarea" rows="8" placeholder="Расскажите обо всех повaдках кота"></textarea>
-              </label>
-            </div>
+            <label class="order__comment-letter">
+              <textarea class="order__comment-textarea" rows="8" placeholder="Расскажите обо всех повaдках кота"></textarea>
+            </label>
           </fieldset>
-          <fieldset class="order__more order__line-green">
+        </div>
+        <div class="order__more order__line-green">
+          <fieldset class="order__fieldset">
             <legend class="order__more-title order__subtitle">
               Дополнительно
             </legend>
-            <div class="order__fieldset-wrapper order__more-wrapper">
+            <div class="order__container">
               <label class="choice choice--checkbox order__more-choice">
                 <input class="choice__checkbox" type="checkbox" name="sweetener" checked>
-                <span>
-                Сахарозаменитель
-              </span>
+                <span>Сахарозаменитель</span>
               </label>
               <label class="choice choice--checkbox order__more-choice">
                 <input class="choice__checkbox" type="checkbox" name="water">
-                <span>
-                Питьевая вода
-              </span>
+                <span>Питьевая вода</span>
               </label>
               <label class="choice choice--checkbox order__more-choice">
                 <input class="choice__checkbox" type="checkbox" name="milk">
-                <span>
-                Молоко
-              </span>
+                <span>Молоко</span>
               </label>
               <label class="choice choice--checkbox order__more-choice">
                 <input class="choice__checkbox" type="checkbox" name="vitamins">
-                <span>
-                Витамины
-              </span>
+                <span>Витамины</span>
               </label>
             </div>
           </fieldset>
-          <div class="order__submit-wrapper">
-            <button class="button order__form-submit" type="submit">
-              Отправить заявку
-            </button>
-            <p class="order__form-required">
-              * - Обязательные поля
-            </p>
-          </div>
-        </form>
-      </div>
+        </div>
+        <div class="order__submit-wrapper">
+          <button class="button order__form-submit" type="submit">
+            Отправить заявку
+          </button>
+          <p class="order__form-required">
+            * - Обязательные поля
+          </p>
+        </div>
+      </form>
     </section>
   </main>
   <footer class="page-footer">
