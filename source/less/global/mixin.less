@@ -21,3 +21,14 @@
 .table-string-end() {
   text-align: end;
 }
+
+.line-green() {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 17px;
+    height: 2px;
+    background-color: var(--basik-green);
+    width: 100%;
+  }
+}

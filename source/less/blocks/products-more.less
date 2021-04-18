@@ -1,25 +1,18 @@
 .products-more {
   padding-top: 25px;
-
-  @media (min-width: @desktop-width) {
-    padding-bottom: 86px;
-  }
-}
-
-.products-more__line-green {
   position: relative;
+  .line-green;
 
   &::before {
-    content: "";
-    position: absolute;
     top: 40px;
-    height: 2px;
-    background-color: var(--basik-green);
-    width: 100%;
 
     @media (min-width: @tablet-width) {
       top: 45px;
     }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 86px;
   }
 }
 
@@ -46,7 +39,7 @@
 
 .products-more__title {
   display: inline-block;
-  margin-bottom: 36px;
+  margin: 0 0 35px 20px;
 
   @media (min-width: @tablet-width) {
     margin-left: 0;
