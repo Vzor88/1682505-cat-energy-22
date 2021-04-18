@@ -15,4 +15,16 @@
   color: var(--basik-black);
   font-weight: 400;
   margin: 0;
+  padding: 0;
+}
+
+.line-green() {
+  &::before {
+    content: "";
+    position: absolute;
+    top: -45px;
+    height: 2px;
+    background-color: var(--basik-green);
+    width: 100%;
+  }
 }

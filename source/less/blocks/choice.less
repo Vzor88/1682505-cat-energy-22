@@ -6,8 +6,17 @@
   margin-bottom: 19px;
   display: block;
 
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
   &--checkbox {
     color: var(--basik-black);
+
+    @media (min-width: @tablet-width) {
+      width: 300px;
+    }
   }
 
   &:last-child {
