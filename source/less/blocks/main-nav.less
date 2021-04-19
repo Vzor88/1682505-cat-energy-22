@@ -1,6 +1,37 @@
 .main-nav {
   position: relative;
+
+  &--closed &__toggle::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 24px;
+    height: 2px;
+    background-color: var(--basik-black);
+    box-shadow: 0 8px 0 0 var(--basik-black), 0 16px 0 0 var(--basik-black);
+  }
+
+  &--closed &__item {
+    display: none;
+
+    @media (min-width: @tablet-width) {
+      display: block;
+    }
+  }
+
+  &--opened &__toggle::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 24px;
+    height: 20px;
+    background-image: url("../../img/icons/icon-close.svg");
+    background-repeat: no-repeat;
+  }
 }
+
 
 .main-nav__list {
   .clear-list;
@@ -71,17 +102,15 @@
 }
 
 .main-nav__toggle {
-  background-image: url("../img/icons/icon-close.svg");
   background-color: var(--basik-white);
-  background-repeat: no-repeat;
-  width: 20px;
-  height: 20px;
   border: none;
   outline: none;
-  cursor: pointer;
   position: absolute;
-  right: 12%;
+  cursor: pointer;
+  right: 5%;
   top: -30px;
+  width: 24px;
+  height: 24px;
 
   @media (min-width: @tablet-width) {
     display: none;

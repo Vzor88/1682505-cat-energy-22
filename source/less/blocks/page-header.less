@@ -1,9 +1,11 @@
 .page-header {
   display: flex;
   flex-direction: column;
+  border-bottom: 1px solid var(--basik-light-dark);
 
   @media (min-width: @tablet-width) {
     padding-top: 24px;
+    border: none;
   }
 
   @media (min-width: @desktop-width) {
@@ -20,27 +22,25 @@
 
 .page-header__wrapper {
   @media (min-width: @tablet-width) {
-    width: 708px;
-    margin: 0 auto;
     padding: 0 30px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
   }
 
   @media (min-width: @desktop-width) {
-    width: 1220px;
     padding: 0 110px;
   }
 }
 
 .page-header__logo {
   width: 175px;
-  margin-left: 24px;
+  margin-left: 20px;
 
   @media (min-width: @tablet-width) {
     width: 175px;
-    margin: 0 25px 0 24px;
+    margin: 0;
   }
 
   @media (min-width: @desktop-width) {

@@ -17,6 +17,7 @@
   display: flex;
   justify-content: center;
   position: relative;
+  align-items: center;
 
   @media (min-width: @desktop-width) {
     margin: 100px 0 50px 0;
@@ -37,10 +38,61 @@
 }
 
 .slider__scale {
-  margin: 0 50px;
+  margin: 0 15px;
+  background-color: var(--basik-white);
+  width: 84px;
+  height: 14px;
+  border-radius: 6px;
+  position: relative;
 
   @media (min-width: @tablet-width) {
-    margin: 0 150px;
+    margin: 0 15px;
+    background-color: var(--basik-light-darkgrey);
+    width: 428px;
+    height: 6px;
+    border-radius: 6px;
+  }
+}
+
+.slider__toggle {
+  background-color: var(--basik-green);
+  width: 35px;
+  height: 6px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  position: relative;
+  top: 4px;
+  cursor: pointer;
+
+  &--before {
+    left: 3px;
+  }
+
+  &--after {
+    left: 43px;
+  }
+
+
+  @media (min-width: @tablet-width) {
+    width: 34px;
+    height: 34px;
+    background-color: var(--basik-white);
+    border: 1px solid var(--basik-dark-grey);
+    border-radius: 50%;
+    left: 210px;
+    top: -13px;
+
+    &::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: var(--basik-green);
+      position: absolute;
+      left: 13px;
+      top: 13px;
+    }
   }
 }
 
@@ -54,6 +106,7 @@
   text-transform: uppercase;
   cursor: pointer;
   padding: 0;
+  outline: none;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
