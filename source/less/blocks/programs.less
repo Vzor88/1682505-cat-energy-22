@@ -155,15 +155,19 @@
   line-height: 16px;
   color: var(--basik-black);
   position: relative;
+  grid-column-start: 1;
+  grid-column-end: -1;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
   }
+}
 
-  &::before {
-    content: url("../img/icons/icon-arrow.svg");
-    position: absolute;
-    right: -50px;
+.programs__icon {
+  margin-left: 20px;
+
+  &:hover {
+    transform: scaleX(1.5);
   }
 }
