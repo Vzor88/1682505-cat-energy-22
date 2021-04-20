@@ -155,19 +155,22 @@
   line-height: 16px;
   color: var(--basik-black);
   position: relative;
-  grid-column-start: 1;
-  grid-column-end: -1;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
   }
+
+  &:hover .programs__icon {
+    transform: scaleX(1.3);
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .programs__icon {
   margin-left: 20px;
-
-  &:hover {
-    transform: scaleX(1.5);
-  }
+  filter: drop-shadow(0 4px 4px var(--basik-tru-shadow));
 }

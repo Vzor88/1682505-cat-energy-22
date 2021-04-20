@@ -73,7 +73,6 @@
     left: 43px;
   }
 
-
   @media (min-width: @tablet-width) {
     width: 34px;
     height: 34px;
@@ -92,6 +91,15 @@
       position: absolute;
       left: 13px;
       top: 13px;
+    }
+
+    &:hover {
+      box-shadow: 0 2px 4px var(--basik-shadow);
+    }
+
+    &:active {
+      border: 1px solid var(--basik-green);
+      box-shadow: 0 3px 5px var(--basik-dark-shadow);
     }
   }
 }
@@ -112,6 +120,14 @@
     font-size: 20px;
     line-height: 30px;
     border-bottom: 1px dotted var(--basik-black);
+
+    &:hover {
+      border-bottom: 1px solid @opacity-black;
+    }
+
+    &:active {
+      border-bottom: 1px solid @opacity-transparent;
+    }
   }
 }
 
