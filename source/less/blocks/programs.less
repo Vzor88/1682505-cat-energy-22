@@ -1,5 +1,9 @@
 .programs {
   padding-top: 22px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
 }
 
 .programs__wrapper {
@@ -31,18 +35,22 @@
 
 .programs__item {
   display: grid;
-  grid-template-columns: auto 1fr;
-  padding: 30px 20px 22px 19px;
+  grid-template-columns: min-content auto auto;
+  padding: 24px 20px 22px 20px;
   margin-bottom: 20px;
   background: var(--basik-light-grey);
 
   @media (min-width: @tablet-width) {
-    grid-template-columns: auto 1fr 290px;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: max-content;
+    padding: 78px 62px 59px 52px;
+    margin-bottom: 30px;
   }
 
   @media (min-width: @desktop-width) {
-    grid-template-columns: auto 1fr;
+    grid-template-columns: min-content auto auto;
     margin: 0;
+    padding: 40px 55px 59px 35px;
   }
 
   &:last-child {
@@ -51,25 +59,29 @@
 }
 
 .programs__item-image {
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   background-color: var(--basik-green);
   border-radius: 50%;
   position: relative;
+  margin-left: 2px;
 
   @media (min-width: @tablet-width) {
     width: 200px;
     height: 200px;
-    grid-row: span 4;
     grid-column-start: 3;
+    grid-row-start: 1;
+    grid-row-end: 4;
     margin-left: 17px;
+    margin-top: 14px;
   }
 
   @media (min-width: @desktop-width) {
     width: 100px;
     height: 100px;
-    grid-row-start: 1;
     grid-column: 1;
+    grid-row-end: 2;
+    margin: 7px 63px 40px 17px;
   }
 
   &::before {
@@ -84,15 +96,19 @@
     &::before {
       background-image: url("../img/icons/cat-slim.svg");
       width: 36px;
-      left: 11px;
-      top: 2px;
+      left: 7px;
+      top: -3px;
 
       @media (min-width: @tablet-width) {
         width: 140px;
+        left: 30px;
+        top: -12px;
       }
 
       @media (min-width: @desktop-width) {
         width: 70px;
+        left: 15px;
+        top: -6px;
       }
     }
   }
@@ -102,21 +118,25 @@
       margin-left: 54px;
     }
 
+    @media (min-width: @desktop-width) {
+      margin-left: 17px;
+    }
+
     &::before {
       background-image: url("../img/icons/cat-pro.svg");
       width: 67px;
-      left: -5px;
-      top: 15px;
+      left: -9px;
+      top: 11px;
 
       @media (min-width: @tablet-width) {
         width: 268px;
-        left: -50px;
-        top: 40px;
+        left: -34px;
+        top: 43px;
       }
 
       @media (min-width: @desktop-width) {
         width: 134px;
-        left: -20px;
+        left: -19px;
         top: 20px;
       }
     }
@@ -127,27 +147,50 @@
   font-size: 24px;
   line-height: 37px;
   text-transform: uppercase;
-  margin: 0 0 29px 20px;
+  margin: 6px 0 16px 19px;
   font-weight: 400;
+  grid-column-start: 2;
+  grid-column-end: -1;
 
   @media (min-width: @tablet-width) {
     font-size: 36px;
     line-height: 36px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    margin: 0 0 25px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column-start: 2;
+    grid-column-end: -1;
+    margin-top: 37px;
   }
 }
 
 .programs__item-text {
   font-family: @font-arial;
   color: var(--basik-grey);
-  margin-bottom: 19px;
-  padding-bottom: 23px;
+  margin-bottom: 18px;
+  padding-bottom: 22px;
   border-bottom: 1px solid var(--basik-medium-grey);
-  grid-column: span 2;
+  grid-column-start: 1;
+  grid-column-end: -1;
 
   @media (min-width: @tablet-width) {
     font-size: 16px;
     line-height: 24px;
+    padding-bottom: 48px;
     border: none;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column-start: 1;
+    grid-column-end: -1;
+    margin-left: 17px;
+    padding-bottom: 25px;
   }
 }
 
@@ -157,13 +200,21 @@
   line-height: 16px;
   color: var(--basik-black);
   position: relative;
+  grid-column-start: 1;
+  grid-column-end: 3;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
   }
 
-  &:hover .programs__icon {
+  @media (min-width: @desktop-width) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    margin-left: 17px;
+  }
+
+  &:hover .programs__icon {   /* Я не уверен что правильно написал это свойство, но как сделать по другому не придумал, */
     transform: scaleX(1.3);
   }
 
@@ -173,6 +224,14 @@
 }
 
 .programs__icon {
-  margin-left: 20px;
+  margin-left: 11px;
   filter: drop-shadow(0 4px 4px var(--basik-tru-shadow));
+
+  @media (min-width: @tablet-width) {
+    margin-left: 21px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 23px;
+  }
 }

@@ -1,7 +1,6 @@
 .page-header {
   display: flex;
   flex-direction: column;
-  border-bottom: 1px solid var(--basik-light-dark);
 
   @media (min-width: @tablet-width) {
     padding-top: 24px;
@@ -10,6 +9,7 @@
 
   @media (min-width: @desktop-width) {
     padding-top: 53px;
+    margin-bottom: 82px;
     background-image: linear-gradient(to right, var(--basik-white) 50%, var(--basik-transparent-green) 50%);
   }
 
@@ -21,6 +21,8 @@
 }
 
 .page-header__wrapper {
+  padding-top: 11px;
+
   @media (min-width: @tablet-width) {
     width: 708px;
     margin: 0 auto;
@@ -56,5 +58,11 @@
 
   &:active {
     opacity: 0.6;
+  }
+}
+
+.page-header__image {
+  @media (min-width: @desktop-width) {
+    width: 202px;
   }
 }
