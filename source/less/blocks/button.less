@@ -6,13 +6,29 @@
   text-transform: uppercase;
   background-color: var(--basik-green);
 
-  &--silver {
-    color: var(--basik-grey);
-    background-color: var(--basik-light-grey);
-  }
-
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 20px;
+  }
+
+  &:hover {
+    background-color: var(--basik-dark-green);
+  }
+
+  &:active {
+    color: @opacity-white;
+  }
+
+  &--silver {
+    color: var(--basik-grey);
+    background-color: var(--basik-light-grey);
+
+    &:hover {
+      background-color: var(--basik-special-darkgrey);
+    }
+
+    &:active {
+      color: @opacity-grey;
+    }
   }
 }

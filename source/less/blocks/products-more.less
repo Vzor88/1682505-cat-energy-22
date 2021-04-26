@@ -34,6 +34,16 @@
   @media (min-width: @desktop-width) {
     display: flex;
     justify-content: space-between;
+    padding: 0 20px;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 0 30px;
+    margin: 0 auto;
+  }
+
+  &::before {
+    top: 23px;
   }
 }
 
@@ -62,6 +72,17 @@
     width: 895px;
     margin-right: 89px;
     margin-bottom: 0;
+  }
+}
+
+.products-more__line-green {
+  .fieldset-clear;
+  .line-green;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 65px;
+    top: 22px;
   }
 }
 

@@ -1,6 +1,14 @@
 .socials {
   background-color: var(--basik-light-grey);
-  padding: 39px 0 22px 0;
+  padding: 36px 0 22px 0;
+
+  @media (min-width: @tablet-width) {
+    padding: 52px 0 22px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 46px 0 22px 0;
+  }
 }
 
 .socials__wrapper {
@@ -13,41 +21,53 @@
     width: 708px;
     padding: 0 30px;
     flex-direction: row;
-    justify-content: space-between;
   }
 
   @media (min-width: @desktop-width) {
     width: 1220px;
     padding: 0 110px;
+    justify-content: space-between;
   }
 }
 
 .socials__text-logo {
   align-self: center;
-  margin-bottom: 32px;
+  margin-bottom: 30px;
+  width: 128px;
+  height: 25px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 0;
+    height: 24px;
+    margin-right: 157px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 1px 24px 0 0;
   }
 }
 
 .socials__list {
   .clear-list;
   display: flex;
-  justify-content: space-around;
   align-items: center;
-  padding: 10px 0;
+  padding: 21px 0 21px 73px;
   border-bottom: 1px solid var(--basik-medium-grey);
   border-top: 1px solid var(--basik-medium-grey);
 
   @media (min-width: @tablet-width) {
     border: none;
     padding: 0;
+    margin-right: 134px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
   }
 }
 
 .socials__item {
-  margin-right: 38px;
+  margin-right: 27px;
 
   &:last-child {
     margin-right: 0;
@@ -62,18 +82,36 @@
     background-image: url("../img/icons/vk.svg");
     height: 13px;
     width: 23px;
+
+    @media (min-width: @tablet-width) {
+      background-size: 29px 17px;
+      height: 17px;
+      width: 29px;
+    }
   }
 
   &--inst {
     background-image: url("../img/icons/inst.svg");
     height: 16px;
     width: 16px;
+
+    @media (min-width: @tablet-width) {
+      background-size: 23px 23px;
+      height: 23px;
+      width: 23px;
+    }
   }
 
   &--facebook {
     background-image: url("../img/icons/facebook.svg");
     height: 20px;
     width: 13px;
+
+    @media (min-width: @tablet-width) {
+      background-size: 17px 31px;
+      height: 31px;
+      width: 17px;
+    }
   }
 }
 
@@ -94,7 +132,7 @@
   font-size: 16px;
   line-height: 18px;
   color: var(--basik-grey);
-  margin-top: 28px;
+  margin-top: 20px;
 }
 
 .socials__html-academy-logo {
@@ -106,6 +144,6 @@
   margin-top: 22px;
 
   @media (min-width: @tablet-width) {
-    margin-left: 20px;
+    margin-left: 25px;
   }
 }

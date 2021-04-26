@@ -1,6 +1,43 @@
 .main-nav {
   position: relative;
+  margin-top: 14px;
+
+  &--closed &__toggle::before {
+    content: "";
+    position: absolute;
+    right: 2px;
+    top: 2px;
+    width: 24px;
+    height: 2px;
+    background-color: var(--basik-black);
+    box-shadow: 0 8px 0 0 var(--basik-black), 0 16px 0 0 var(--basik-black);
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-top: 0;
+  }
+
+  &--closed &__item {
+    display: none;
+
+    @media (min-width: @tablet-width) {
+      margin-top: 0;
+      display: block;
+    }
+  }
+
+  &--opened &__toggle::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 24px;
+    height: 20px;
+    background-image: url("../../img/icons/icon-close.svg");
+    background-repeat: no-repeat;
+  }
 }
+
 
 .main-nav__list {
   .clear-list;
@@ -8,7 +45,11 @@
   @media (min-width: @tablet-width) {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 10px;
+    margin-top: 15px;
+
+    @media (min-width: @desktop-width) {
+      margin-top: 8px;
+    }
   }
 }
 
@@ -22,7 +63,7 @@
 
   @media (min-width: @tablet-width) {
     border: none;
-    margin-right: 35px;
+    margin-right: 34px;
 
     &--active {
       border-bottom: 2px solid var(--basik-green);
@@ -46,20 +87,20 @@
   line-height: 20px;
   color: var(--basik-black);
   text-transform: uppercase;
-  padding: 20px 0;
+  padding: 22.5px 0;
   display: block;
 
   @media (min-width: @tablet-width) {
     font-size: 18px;
     line-height: 24px;
     font-weight: 400;
-    padding: 0 0 10px 0;
+    padding: 0 0 7px 0;
   }
 
   @media (min-width: @desktop-width) {
     font-size: 20px;
     line-height: 30px;
-    padding: 0 0 8px 0;
+    padding: 0 0 5px 0;
     color: var(--basik-white);
   }
 
@@ -68,20 +109,26 @@
       color: var(--basik-black);
     }
   }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .main-nav__toggle {
-  background-image: url("../img/icons/icon-close.svg");
   background-color: var(--basik-white);
-  background-repeat: no-repeat;
-  width: 20px;
-  height: 20px;
   border: none;
   outline: none;
-  cursor: pointer;
   position: absolute;
-  right: 12%;
-  top: -30px;
+  cursor: pointer;
+  right: 5.5%;
+  top: -45px;
+  width: 24px;
+  height: 24px;
 
   @media (min-width: @tablet-width) {
     display: none;
