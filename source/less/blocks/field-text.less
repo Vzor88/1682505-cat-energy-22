@@ -1,4 +1,6 @@
-.field-text {
+@field-text: field-text;
+
+.@{field-text} {
   display: flex;
   align-items: baseline;
   font-size: 16px;
@@ -28,13 +30,13 @@
     @media (min-width: @tablet-width) {
       margin-bottom: 19px;
     }
-  }
 
-  &--weight .field-text__content {
-    margin-right: 15px;
+    & .@{field-text}__content {
+      margin-right: 15px;
 
-    @media (min-width: @tablet-width) {
-      margin-right: 21px;
+      @media (min-width: @tablet-width) {
+        margin-right: 21px;
+      }
     }
   }
 }
@@ -139,26 +141,26 @@
 
   &:focus {
     border: 2px solid var(--basik-grey);
-  }
 
-  &:focus + .field-text__icon-email {
-    stroke: var(--basik-green);
-  }
+    & + .@{field-text}__icon-email {
+      stroke: var(--basik-green);
+    }
 
-  &:focus + .field-text__icon-tel {
-    fill: var(--basik-green);
+    & + .@{field-text}__icon-tel {
+      fill: var(--basik-green);
+    }
   }
 
   &:invalid:not(:placeholder-shown) {
     border: 2px solid var(--basik-red);
-  }
 
-  &:invalid:not(:placeholder-shown) + .field-text__icon-email {
-    stroke: var(--basik-red);
-  }
+    & + .@{field-text}__icon-email {
+      stroke: var(--basik-red);
+    }
 
-  &:invalid:not(:placeholder-shown) + .field-text__icon-tel {
-    fill: var(--basik-red);
+    & + .@{field-text}__icon-tel {
+      fill: var(--basik-red);
+    }
   }
 
   &:focus-visible {

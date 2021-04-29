@@ -62,7 +62,8 @@
   .clear-list;
   display: flex;
   align-items: center;
-  padding: 21px 0 21px 73px;
+  justify-content: center;
+  padding: 21px 0;
   border-bottom: 1px solid var(--basik-medium-grey);
   border-top: 1px solid var(--basik-medium-grey);
 
@@ -85,7 +86,11 @@
   }
 
   &:last-child {
-    margin-right: 0;
+    margin-right: 10px;
+
+    @media (min-width: @tablet-width) {
+      margin-right: 0;
+    }
   }
 }
 
