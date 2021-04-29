@@ -9,6 +9,12 @@
   @media (min-width: @desktop-width) {
     padding: 46px 0 22px 0;
   }
+
+  &--form {
+    @media (min-width: @desktop-width) {
+      padding: 55px 0 22px 0;
+    }
+  }
 }
 
 .socials__wrapper {
@@ -35,6 +41,7 @@
   margin-bottom: 30px;
   width: 128px;
   height: 25px;
+  cursor: pointer;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 0;
@@ -45,13 +52,18 @@
   @media (min-width: @desktop-width) {
     margin: 1px 24px 0 0;
   }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .socials__list {
   .clear-list;
   display: flex;
   align-items: center;
-  padding: 21px 0 21px 73px;
+  justify-content: center;
+  padding: 21px 0;
   border-bottom: 1px solid var(--basik-medium-grey);
   border-top: 1px solid var(--basik-medium-grey);
 
@@ -67,51 +79,74 @@
 }
 
 .socials__item {
-  margin-right: 27px;
+  margin-right: 37px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 27px;
+  }
 
   &:last-child {
-    margin-right: 0;
+    margin-right: 10px;
+
+    @media (min-width: @tablet-width) {
+      margin-right: 0;
+    }
   }
 }
 
-.socials__item-link {
+.socials__item-icon {
   display: block;
-  background-repeat: no-repeat;
+
+  &:hover {
+    fill: var(--basik-green);
+  }
+
+  &:active {
+    fill-opacity: 0.3;
+  }
 
   &--vk {
-    background-image: url("../img/icons/vk.svg");
-    height: 13px;
     width: 23px;
+    height: 13px;
 
     @media (min-width: @tablet-width) {
-      background-size: 29px 17px;
       height: 17px;
       width: 29px;
     }
   }
 
   &--inst {
-    background-image: url("../img/icons/inst.svg");
     height: 16px;
     width: 16px;
 
     @media (min-width: @tablet-width) {
-      background-size: 23px 23px;
       height: 23px;
       width: 23px;
     }
   }
 
   &--facebook {
-    background-image: url("../img/icons/facebook.svg");
     height: 20px;
     width: 13px;
 
     @media (min-width: @tablet-width) {
-      background-size: 17px 31px;
       height: 31px;
       width: 17px;
     }
+
+    &:hover {
+      stroke: var(--basik-green);
+      fill: none;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  &--logo {
+    width: 27px;
+    height: 34px;
   }
 }
 
@@ -133,11 +168,13 @@
   line-height: 18px;
   color: var(--basik-grey);
   margin-top: 20px;
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .socials__html-academy-logo {
-  background-image: url("../img/icons/html-academy.svg");
-  background-repeat: no-repeat;
   display: block;
   width: 27px;
   height: 34px;

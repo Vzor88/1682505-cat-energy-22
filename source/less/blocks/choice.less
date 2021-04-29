@@ -1,30 +1,105 @@
 .choice {
+  position: relative;
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
   color: var(--basik-neitral-black);
-  margin-bottom: 19px;
+  margin-bottom: 25px;
+  margin-left: 45px;
+  margin-right: 24px;
   display: block;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
+    margin-left: 58px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    border: 1px solid var(--basik-dark-grey);
+    width: 30px;
+    height: 30px;
+    left: -46px;
+    top: -7px;
+  }
+
+  &:hover {
+    &::before {
+      border: 1px solid var(--basik-choise-dark);
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &--radio {
+    &::before {
+      border-radius: 50%;
+
+      @media (min-width: @tablet-width) {
+        width: 40px;
+        height: 40px;
+        left: -61px;
+        top: -6px;
+      }
+    }
+
+    &::after {
+      left: -37px;
+      top: 2px;
+      width: 13.5px;
+      height: 13.5px;
+      border-radius: 50%;
+      background-color: var(--basik-green);
+      opacity: 0;
+
+      @media (min-width: @tablet-width) {
+        width: 18px;
+        height: 18px;
+        left: -49px;
+        top: 6px;
+      }
+    }
   }
 
   &--checkbox {
     color: var(--basik-black);
 
     @media (min-width: @tablet-width) {
-      width: 300px;
+      margin-left: 70px;
+    }
+
+    &::before {
+      @media (min-width: @tablet-width) {
+        width: 39px;
+        height: 38px;
+        left: -59px;
+        top: -6px;
+      }
+    }
+
+    &::after {
+      background-image: url("../../img/icons/green-check.svg");
+      background-repeat: no-repeat;
+      left: -39px;
+      top: 3px;
+      width: 18px;
+      height: 14px;
+      border-radius: 0;
+      opacity: 0;
+
+      @media (min-width: @tablet-width) {
+        left: -47px;
+        top: 7px;
+      }
     }
   }
-
-  &:last-child {
-    margin-bottom: 0;
-  }
-}
-
-.choice__radio,
-.choice__checkbox {
-  margin-right: 16px;
 }

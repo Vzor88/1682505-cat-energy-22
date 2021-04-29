@@ -38,7 +38,6 @@
   }
 }
 
-
 .main-nav__list {
   .clear-list;
 
@@ -105,8 +104,13 @@
   }
 
   &--form {
+    @media (min-width: @tablet-width) {
+      padding: 0 0 4px 0;
+    }
+
     @media (min-width: @desktop-width) {
       color: var(--basik-black);
+      padding: 0 0 7px 0;
     }
   }
 
