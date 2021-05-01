@@ -1,13 +1,12 @@
 .products-more {
-  padding-top: 25px;
   position: relative;
   .line-green;
 
   &::before {
-    top: 40px;
+    top: 16px;
 
     @media (min-width: @tablet-width) {
-      top: 45px;
+      top: 22px;
     }
   }
 
@@ -24,22 +23,24 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 0 110px;
+    padding: 0 70px;
     margin: 0 auto;
-    width: 1220px;
+    width: 1300px;
   }
 }
 
 .products-more__joint-wrapper {
+  padding: 0 20px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
+
   @media (min-width: @desktop-width) {
     display: flex;
     justify-content: space-between;
-    padding: 0 20px;
-  }
-
-  @media (min-width: @tablet-width) {
-    padding: 0 30px;
-    margin: 0 auto;
+    padding: 0 41px;
   }
 
   &::before {
@@ -50,16 +51,23 @@
 .products-more__title {
   display: inline-block;
   margin: 0 0 35px 20px;
+  padding-right: 22px;
 
   @media (min-width: @tablet-width) {
     margin-left: 0;
+    margin-bottom: 80px;
+    padding: 0 37px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 35px 0 40px;
   }
 }
 
 .products-more__list {
   list-style-type: none;
-  margin: 0;
-  padding: 0 20px;
+  margin: 0 0 39px 0;
+  padding: 0;
 
   @media (min-width: @tablet-width) {
     border: 1px solid var(--basik-dark-grey);
@@ -70,7 +78,7 @@
   @media (min-width: @desktop-width) {
     border: none;
     width: 895px;
-    margin-right: 89px;
+    margin-right: 81px;
     margin-bottom: 0;
   }
 }
@@ -90,21 +98,29 @@
   display: flex;
   flex-direction: column;
   border-top: 1px solid var(--basik-dark-grey);
-  padding: 13px 0 18px 1px;
+  padding: 12px 0 18px 0;
 
   @media (min-width: @tablet-width) {
-    padding: 16px 38px 28px 38px;
+    padding: 24px 36px 29px 37px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 15px 0 17px 0;
+    padding: 14px 0 17px 0;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
   }
 
   &:last-child {
     border-bottom: 1px solid var(--basik-dark-grey);
+    padding-bottom: 18px;
+
+    @media (min-width: @tablet-width) {
+      padding-bottom: 27px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-bottom: 16px;
+    }
   }
 }
 
@@ -112,16 +128,34 @@
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 9px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 650px;
-    margin-right: 20px;
+    width: 611px;
+    margin-right: 39px;
+    margin-bottom: 0;
+  }
+
+  &:last-child {
+    @media (min-width: @tablet-width) {
+      margin-bottom: 8px;
+    }
   }
 }
 
 .products-more__item-value {
   .table-string-end;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 48.5px;
+  }
+
+  &--water {
+    @media (min-width: @tablet-width) {
+      padding-left: 57px;
+    }
+  }
 }
 
 .products-more__item-subtitle {
@@ -130,7 +164,7 @@
   line-height: 16px;
   text-transform: uppercase;
   color: var(--basik-neitral-black);
-  margin: 0 0 13px 0;
+  margin: 0 0 13px 1px;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -138,7 +172,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin: 0;
+    margin: 10px 0 0 0;
   }
 }
 
@@ -148,26 +182,41 @@
   line-height: 14px;
   color: var(--basik-grey);
   margin-bottom: 15px;
+  width: 100%;
+  border-spacing: 0;
 
   @media (min-width: @tablet-width) {
     font-size: 16px;
     line-height: 20px;
+    width: auto;
+    margin-top: 3px;
+    margin-right: 2px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 325px;
-    margin: 0;
+    width: 287px;
+    margin: 14px 0 0 0;
+  }
+
+  &--50 {
+    @media (min-width: @desktop-width) {
+      width: 278px;
+      margin: 14px 9px 0 0;
+    }
   }
 }
 
 .products-more__item-button {
-  padding: 10px 109px;
+  padding: 11px 109px;
+  letter-spacing: 1.2px;
 
   @media (min-width: @tablet-width) {
+    padding: 9px 109px;
     font-size: 16px;
+    letter-spacing: 0;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 7px 91px;
+    padding: 10px 91px;
   }
 }

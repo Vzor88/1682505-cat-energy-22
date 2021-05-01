@@ -29,6 +29,14 @@
       padding: 63px 89px 57px 76px;
     }
   }
+
+  &--catalog {
+    padding: 27px 24px 25px 19px;
+
+    @media (min-width: @tablet-width) {
+      padding: 0;
+    }
+  }
 }
 
 .contacts__wrapper {
@@ -44,6 +52,17 @@
   @media (min-width: @desktop-width) {
     padding: 0;
     width: 100%;
+  }
+
+  &--catalog {
+    @media (min-width: @tablet-width) {
+      padding: 64px 70px 56px 70px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding: 64px 90px 56px 76px;
+      box-sizing: border-box;
+    }
   }
 }
 

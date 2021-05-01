@@ -1,6 +1,6 @@
 .main-nav {
   position: relative;
-  margin-top: 14px;
+  margin-top: 12px;
 
   &--closed &__toggle::before {
     content: "";
@@ -50,6 +50,12 @@
       margin-top: 8px;
     }
   }
+
+  &--catalog {
+    @media (min-width: @tablet-width) {
+      margin-top: 10px;
+    }
+  }
 }
 
 .main-nav__item {
@@ -76,6 +82,12 @@
       @media (min-width: @desktop-width) {
         border-bottom: 2px solid var(--basik-green);
       }
+    }
+  }
+
+  &--catalog {
+    @media (min-width: @tablet-width) {
+      margin-right: 36px;
     }
   }
 }
@@ -114,6 +126,12 @@
     }
   }
 
+  &-catalog {
+    @media (min-width: @tablet-width) {
+      padding: 0 0 7px 0;
+    }
+  }
+
   &:hover {
     opacity: 0.6;
   }
@@ -129,8 +147,8 @@
   outline: none;
   position: absolute;
   cursor: pointer;
-  right: 5.5%;
-  top: -45px;
+  right: 5.75%;
+  top: -44px;
   width: 24px;
   height: 24px;
 

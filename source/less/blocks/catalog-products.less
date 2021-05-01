@@ -1,9 +1,16 @@
 .catalog-products {
   padding-top: 27px;
   border-top: 1px solid var(--basik-light-dark);
+  margin-bottom: 24px;
 
   @media (min-width: @tablet-width) {
     border: none;
+    padding-top: 0;
+    margin-bottom: 67px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 74px;
   }
 }
 
@@ -49,7 +56,7 @@
 
 .catalog-products__item {
   border-top: 1px solid var(--basik-special-darkgrey);
-  padding-top: 19px;
+  padding-top: 18px;
 
   @media (min-width: @tablet-width) {
     padding-top: 0;
@@ -64,7 +71,7 @@
 .catalog-products__item-wrapper {
   padding: 0 20px;
   display: grid;
-  grid-template-columns: 160px 1fr;
+  grid-template-columns: 140px 1fr;
 
   @media (min-width: @tablet-width) {
     background-color: var(--basik-light-grey);
@@ -72,6 +79,16 @@
     display: flex;
     flex-direction: column;
     position: relative;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 162px 37px 40px 39px;
+  }
+
+  &--rice-500 {
+    @media (min-width: @tablet-width) {
+      padding: 163px 37px 40px 39px;
+    }
   }
 }
 
@@ -94,33 +111,86 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
 
   &--chicken-500 {
-    width: 68px;
+    width: 80px;
     height: 86px;
+    transform: translate(-50%, -57%);
+
+    @media (min-width: @tablet-width) {
+      transform: translate(-50%, -45.5%);
+    }
+
+    @media (min-width: @desktop-width) {
+      transform: translate(-50%, -48%);
+    }
   }
 
-  &--chicken-1000,
+  &--chicken-1000 {
+    width: 84px;
+    height: 101px;
+    transform: translate(-50%, -51%);
+
+    @media (min-width: @tablet-width) {
+      transform: translate(-50%, -52%);
+    }
+
+    @media (min-width: @desktop-width) {
+      transform: translate(-49%, -53.8%);
+    }
+  }
+
   &--fish-1000,
   &--buckwheat-1000 {
     width: 84px;
     height: 101px;
+    transform: translate(-50%, -51%);
+
+    @media (min-width: @tablet-width) {
+      transform: translate(-50%, -52%);
+    }
+
+    @media (min-width: @desktop-width) {
+      transform: translate(-49%, -57%);
+    }
   }
 
-  &--fish-500,
-  &--buckwheat-500 {
-    width: 68px;
+  &--fish-500 {
+    width: 72px;
     height: 78px;
+    transform: translate(-50%, -46%);
+
+    @media (min-width: @desktop-width) {
+      transform: translate(-50%, -49%);
+    }
+  }
+
+  &--buckwheat-500 {
+    width: 72px;
+    height: 78px;
+    transform: translate(-50%, -43%);
+
+    @media (min-width: @desktop-width) {
+      transform: translate(-50%, -49%);
+    }
   }
 
   &--rice-500 {
-    width: 72px;
+    width: 78px;
     height: 84px;
+    transform: translate(-50%, -46%);
+
+    @media (min-width: @tablet-width) {
+      transform: translate(-50%, -45%);
+    }
+
+    @media (min-width: @desktop-width) {
+      transform: translate(-50%, -50%);
+    }
   }
 
   @media (min-width: @tablet-width) {
-    top: 15px;
+    top: 33px;
     width: fit-content;
     height: fit-content;
   }
@@ -133,12 +203,14 @@
   text-transform: uppercase;
   color: var(--basik-neitral-black);
   width: 76px;
+  margin: 0 0 14px 0;
 
   @media (min-width: @tablet-width) {
     width: 155px;
     font-size: 20px;
     line-height: 24px;
     text-align: center;
+    margin-left: 3px;
   }
 }
 
@@ -148,10 +220,14 @@
   font-size: 12px;
   line-height: 16px;
   color: var(--basik-grey);
-  margin-bottom: 22px;
+  margin-bottom: 23px;
+  padding: 0;
+  border-spacing: 0;
 
   @media (min-width: @tablet-width) {
     font-size: 16px;
+    line-height: 17px;
+    margin-bottom: 33px;
     border-collapse: collapse;
   }
 }
@@ -162,6 +238,10 @@
   @media (min-width: @tablet-width) {
     padding: 7px 0;
   }
+
+  &--weight {
+    padding-right: 2px;
+  }
 }
 
 .catalog-products__table-string {
@@ -171,18 +251,20 @@
 }
 
 .catalog-products__button {
-  padding: 10px 109px;
+  padding: 11px 109px;
   margin-bottom: 25px;
   grid-column-start: 1;
   grid-column-end: -1;
+  letter-spacing: 1px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 0;
     padding: 9.5px 93px;
     font-size: 16px;
+    letter-spacing: 0;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 10px 56px;
+    padding: 10px 54px;
   }
 }
