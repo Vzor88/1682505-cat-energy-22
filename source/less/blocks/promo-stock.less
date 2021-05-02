@@ -1,14 +1,17 @@
 .promo-stock {
-  padding: 60px 0 43px 0;
+  padding: 58px 0 42px 0;
   background-color: var(--basik-transparent-green);
+  margin-bottom: 35px;
 
   @media (min-width: @tablet-width) {
-    padding: 71px 0 69px 0;
-    background-position: 15% 60px;
+    padding: 55px 0 68px 79px;
+    margin-bottom: 76px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 55px 0 42px 0;
+    padding: 55px 0 40px 0;
+    width: 245px;
+    margin: 0;
   }
 }
 
@@ -19,11 +22,9 @@
   flex-direction: column;
 
   @media (min-width: @tablet-width) {
-    margin: 0 30px;
+    margin: 0;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
   }
 
   @media (min-width: @desktop-width) {
@@ -39,6 +40,15 @@
   font-weight: 400;
   text-align: center;
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 17px;
+    text-align: start;
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: center;
+  }
 }
 
 .promo-stock__gift {
@@ -46,13 +56,15 @@
   height: 70px;
   background-image: url("../img/icons/icon-gift.svg");
   background-repeat: no-repeat;
-  margin-bottom: 43px;
+  margin-bottom: 59px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 0;
+    margin-right: 266px;
   }
 
   @media (min-width: @desktop-width) {
     margin-bottom: 46px;
+    margin-right: 0;
   }
 }
