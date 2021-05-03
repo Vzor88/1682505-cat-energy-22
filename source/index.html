@@ -4,10 +4,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Интернет-магазин "кэт энерджи"</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicons/32.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/180.png">
+  <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page-body">
   <header class="page-header">
+    <div class="page-header__promo-cat"></div>
     <div class="page-header__wrapper">
       <a class="page-header__logo">
         <picture>
@@ -49,9 +54,9 @@
             </p>
           </div>
           <picture>
-            <source srcset="img/promo-product-desktop.png" media="(min-width: 1440px)">
-            <source srcset="img/promo-product-tablet.jpg" media="(min-width: 768px)">
-            <img class="promo__image" src="img/promo-product-mobile.png" width="280" height="270" alt="баночка с продуктом cat energy">
+            <source media="(min-width: 1440px)" srcset="img/promo/promo-product-desktop.png 1x, img/promo/promo-product-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/promo/promo-product-tablet.jpg 1x, img/promo/promo-product-tablet@2x.jpg 2x">
+            <img class="promo__image" src="img/promo/promo-product-mobile.png" width="280" height="270" srcset="img/promo/promo-product-mobile@2x.png 2x" alt="баночка с продуктом cat energy">
           </picture>
           <a class="button promo__button" href="form.html">
             Подобрать программу
@@ -182,14 +187,14 @@
           <div class="slider__wrapper">
             <div class="slider__wrapper-image slider__wrapper-image--before">
               <picture>
-                <source srcset="img/before-desktop.png" media="(min-width: 768px)">
-                <img class="slider__image slider__image--active slider__image--before" src="img/example-before.png" width="311" height="232" alt="изображение полного кота">
+                <source media="(min-width: 768px)" srcset="img/cat/cat-after.png 1x, img/cat/cat-after@2x.png 2x">
+                <img class="slider__image slider__image--active slider__image--after" src="img/cat/cat-after-mobile.png" width="251" height="240" srcset="img/cat/cat-after-mobile@2x.png 2x" alt="изображение худого кота">
               </picture>
             </div>
             <div class="slider__wrapper-image slider__wrapper-image--after">
               <picture>
-                <source srcset="img/after-desktop.png" media="(min-width: 768px)">
-                <img class="slider__image slider__image--after" src="img/example-after.png" width="251" height="240" alt="изображение худого кота">
+                <source media="(min-width: 768px)" srcset="img/cat/cat-before.png 1x, img/cat/cat-before@2x.png 2x">
+                <img class="slider__image slider__image--before" src="img/cat/cat-before-mobile.png" width="311" height="232" srcset="img/cat/cat-before-mobile@2x.png 2x" alt="изображение полного кота">
               </picture>
             </div>
           </div>
@@ -231,8 +236,15 @@
           <h2 class="visually-hidden">Карта проезда</h2>
           <iframe class="map__iframe" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1998.5121387638892!2d30.31724685819702!3d59.94023713227073!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1614435850237!5m2!1sru!2sru" width="320" height="362" allowfullscreen title="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></iframe>
           <div class="map__static-image">
-            <img class="map__image" width="320" height="362" src="./img/map.png" alt="изображение карты по ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
-            <img class="map__image-point" width="57" height="53" src="img/map-point.png" alt="Местоположение на карте адреса ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/map/map-desktop.png 1x, img/map/map-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/map/map-tablet.png 1x, img/map/map-tablet@2x.png 2x">
+              <img class="map__image" src="img/map/map-mobile.png" width="320" height="362" srcset="img/map/map-mobile@2x.png 2x" alt="изображение карты по ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
+            </picture>
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/map/map-point.png 1x, img/map/map-point@2x.png 2x">
+              <img class="map__image-point" src="img/map/map-point-mobile.png" width="57" height="53" srcset="img/map/map-point-mobile@2x.png 2x" alt="Местоположение на карте адреса ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
+            </picture>
           </div>
         </div>
       </section>

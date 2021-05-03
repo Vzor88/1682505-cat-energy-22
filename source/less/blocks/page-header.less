@@ -10,7 +10,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 53px;
+    padding-top: 0;
     margin-bottom: 82px;
     background-image: linear-gradient(to right, var(--basik-white) 50%, var(--basik-transparent-green) 50%);
   }
@@ -49,7 +49,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 0 110px;
+    padding: 53px 110px 0 110px;
     width: 1220px;
   }
 }
@@ -79,5 +79,22 @@
 .@{page-header}__image {
   @media (min-width: @desktop-width) {
     width: 202px;
+  }
+}
+
+.@{page-header}__promo-cat {
+  @media (min-width: @desktop-width) {
+    background-image: url("../img/promo-cat-desktop.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50%;
+    height: 694px;
+    position: absolute;
+    right: 0;
+    z-index: -1;
+  }
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/promo-cat-desktop@2x.jpg");
   }
 }

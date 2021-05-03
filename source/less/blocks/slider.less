@@ -28,7 +28,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin: 362px 0 51px 119px;
+    margin: 362px 0 0 119px;
     z-index: 2;
     justify-content: space-between;
   }
@@ -207,33 +207,35 @@
 
   &--before {
     margin-bottom: 32px;
-    margin-top: -2px;
 
     @media (min-width: @tablet-width) {
-      margin-top: -7px;
+      margin-top: -5px;
       height: 620px;
-      left: 0;
+      right: 354px;
       object-position: 16px;
     }
 
     @media (min-width: @desktop-width) {
       object-position: -20px;
+      right: 345px;
+      margin-top: -4px;
     }
   }
 
   &--after {
+    margin-bottom: 24px;
     margin-left: 37px;
-    margin-bottom: 22px;
 
     @media (min-width: @tablet-width) {
-      margin-top: 1px;
-      right: 0;
+      left: 317px;
       height: 607px;
       object-position: -247px;
     }
 
     @media (min-width: @desktop-width) {
       object-position: -274px;
+      left: 308px;
+      margin-top: -2px;
     }
   }
 }

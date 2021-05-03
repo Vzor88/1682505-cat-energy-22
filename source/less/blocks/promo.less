@@ -39,6 +39,28 @@
     box-sizing: border-box;
     padding: 108px 0 0 80px;
   }
+
+  &::before {
+    content: "";
+    background-image: url("../img/promo-cat-mobile.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    z-index: -1;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/promo-cat-mobile@2x.jpg");
+    }
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+  }
 }
 
 .promo__title {
