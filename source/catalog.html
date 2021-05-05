@@ -4,6 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Каталог продукции интернет-магазина "кэт энерджи"</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicons/32.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/180.png">
+  <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page-body">
@@ -50,7 +54,10 @@
         <li class="catalog-products__item">
           <div class="catalog-products__item-wrapper">
             <a class="catalog-products__link" href="#">
-              <img src="img/catalog-products/chicken-500.png" class="catalog-products__link-image catalog-products__link-image--chicken-500" width="161" height="172" alt="изображение продукта питания со кусом курицы вес 500 грамм">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/catalog-products/chicken-500.png 1x, img/catalog-products/chicken-500@2x.png 2x">
+                <img src="img/catalog-products/chicken-500-mobile.png" class="catalog-products__link-image catalog-products__link-image--chicken-500" width="68" height="86" srcset="img/catalog-products/chicken-500-mobile@2x.png 2x" alt="изображение продукта питания со кусом курицы вес 500 грамм">
+              </picture>
             </a>
             <a class="catalog-products__link-text" href="#">
               <h3 class="catalog-products__title-link">
@@ -79,7 +86,10 @@
         <li class="catalog-products__item">
           <div class="catalog-products__item-wrapper">
             <a class="catalog-products__link" href="#">
-              <img src="img/catalog-products/chicken-1000.png" class="catalog-products__link-image catalog-products__link-image--chicken-1000" width="168" height="207" alt="изображение продукта питания со кусом курицы вес 1000 грамм">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/catalog-products/chicken-1000.png 1x, img/catalog-products/chicken-1000@2x.png 2x">
+                <img src="img/catalog-products/chicken-1000-mobile.png" class="catalog-products__link-image catalog-products__link-image--chicken-1000" width="84" height="101" srcset="img/catalog-products/chicken-1000-mobile@2x.png 2x" alt="изображение продукта питания со кусом курицы вес 1000 грамм">
+              </picture>
             </a>
             <a class="catalog-products__link-text" href="#">
               <h3 class="catalog-products__title-link">
@@ -108,7 +118,10 @@
         <li class="catalog-products__item">
           <div class="catalog-products__item-wrapper">
             <a class="catalog-products__link" href="#">
-              <img src="img/catalog-products/fish-500.png" class="catalog-products__link-image catalog-products__link-image--fish-500" width="163" height="174" alt="изображение продукта питания со кусом рыбы вес 500 грамм">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/catalog-products/fish-500.png 1x, img/catalog-products/fish-500@2x.png 2x">
+                <img src="img/catalog-products/fish-500-mobile.png" class="catalog-products__link-image catalog-products__link-image--fish-500" width="68" height="78" srcset="img/catalog-products/fish-500-mobile@2x.png 2x" alt="изображение продукта питания со кусом рыбы вес 500 грамм">
+              </picture>
             </a>
             <a class="catalog-products__link-text" href="#">
               <h3 class="catalog-products__title-link">
@@ -137,7 +150,10 @@
         <li class="catalog-products__item">
           <div class="catalog-products__item-wrapper">
             <a class="catalog-products__link" href="#">
-              <img src="img/catalog-products/fish-1000.png" class="catalog-products__link-image catalog-products__link-image--fish-1000" width="168" height="200" alt="изображение продукта питания со кусом рыбы вес 1000 грамм">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/catalog-products/fish-1000.png 1x, img/catalog-products/fish-1000@2x.png 2x">
+                <img src="img/catalog-products/fish-1000-mobile.png" class="catalog-products__link-image catalog-products__link-image--fish-1000" width="84" height="101" srcset="img/catalog-products/fish-1000-mobile@2x.png 2x" alt="изображение продукта питания со кусом рыбы вес 1000 грамм">
+              </picture>
             </a>
             <a class="catalog-products__link-text" href="#">
               <h3 class="catalog-products__title-link">
@@ -164,9 +180,12 @@
           </div>
         </li>
         <li class="catalog-products__item">
-          <div class="catalog-products__item-wrapper">
+          <div class="catalog-products__item-wrapper catalog-products__item-wrapper--buckwheat-500">
             <a class="catalog-products__link" href="#">
-              <img src="img/catalog-products/buckwheat-500.png" class="catalog-products__link-image catalog-products__link-image--buckwheat-500" width="161" height="171" alt="изображение продукта питания со кусом гречки вес 500 грамм">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/catalog-products/buckwheat-500.png 1x, img/catalog-products/buckwheat-500@2x.png 2x">
+                <img src="img/catalog-products/buckwheat-500-mobile.png" class="catalog-products__link-image catalog-products__link-image--buckwheat-500" width="68" height="78" srcset="img/catalog-products/buckwheat-500-mobile@2x.png 2x" alt="изображение продукта питания со кусом гречки вес 500 грамм">
+              </picture>
             </a>
             <a class="catalog-products__link-text" href="#">
               <h3 class="catalog-products__title-link">
@@ -193,9 +212,12 @@
           </div>
         </li>
         <li class="catalog-products__item">
-          <div class="catalog-products__item-wrapper">
+          <div class="catalog-products__item-wrapper catalog-products__item-wrapper--buckwheat-1000">
             <a class="catalog-products__link" href="#">
-              <img src="img/catalog-products/buckwheat-1000.png" class="catalog-products__link-image catalog-products__link-image--buckwheat-1000" width="168" height="200" alt="изображение продукта питания со кусом гречки вес 1000 грамм">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/catalog-products/buckwheat-1000.png 1x, img/catalog-products/buckwheat-1000@2x.png 2x">
+                <img src="img/catalog-products/buckwheat-1000-mobile.png" class="catalog-products__link-image catalog-products__link-image--buckwheat-1000" width="84" height="100" srcset="img/catalog-products/buckwheat-1000-mobile@2x.png 2x" alt="изображение продукта питания со кусом гречки вес 1000 грамм">
+              </picture>
             </a>
             <a class="catalog-products__link-text" href="#">
               <h3 class="catalog-products__title-link">
@@ -224,7 +246,10 @@
         <li class="catalog-products__item">
           <div class="catalog-products__item-wrapper catalog-products__item-wrapper--rice-500">
             <a class="catalog-products__link" href="#">
-              <img src="img/catalog-products/rice-500.png" class="catalog-products__link-image catalog-products__link-image--rice-500" width="163" height="174" alt="изображение продукта питания со кусом риса вес 500 грамм">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/catalog-products/rice-500.png 1x, img/catalog-products/rice-500@2x.png 2x">
+                <img src="img/catalog-products/rice-500-mobile.png" class="catalog-products__link-image catalog-products__link-image--rice-500" width="72" height="84" srcset="img/catalog-products/rice-500-mobile@2x.png 2x" alt="изображение продукта питания со кусом риса вес 500 грамм">
+              </picture>
             </a>
             <a class="catalog-products__link-text" href="#">
               <h3 class="catalog-products__title-link">
@@ -411,9 +436,9 @@
           </a>
         </li>
         <li class="socials__item">
-          <a href="#">
-            <svg class="socials__item-icon socials__item-icon--facebook" width="13" height="20" viewBox="0 0 13 20" stroke="#666666" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M11.5 0.833252H8.75002C7.53445 0.833252 6.36866 1.30674 5.50911 2.14957C4.64957 2.99239 4.16669 4.1355 4.16669 5.32743V8.02394H1.41669V11.6193H4.16669V18.81H7.83335V11.6193H10.5834L11.5 8.02394H7.83335V5.32743C7.83335 5.08905 7.92993 4.86042 8.10184 4.69186C8.27375 4.52329 8.50691 4.4286 8.75002 4.4286H11.5V0.833252Z" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/>
+          <a class="socials__link socials__link--facebook" href="#">
+            <svg class="socials__item-icon socials__item-icon--facebook" width="15" height="29" viewBox="0 0 15 29" stroke="#666666" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14.0001 0.749756H10.5001C8.95299 0.749756 7.46925 1.45999 6.37529 2.72423C5.28133 3.98846 4.66675 5.70313 4.66675 7.49103V11.5358H1.16675V16.9288H4.66675V27.7148H9.33342V16.9288H12.8334L14.0001 11.5358H9.33342V7.49103C9.33342 7.13345 9.45633 6.79051 9.67512 6.53767C9.89392 6.28482 10.1907 6.14277 10.5001 6.14277H14.0001V0.749756Z" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
           </a>
         </li>
