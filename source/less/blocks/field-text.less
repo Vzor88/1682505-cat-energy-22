@@ -100,7 +100,8 @@
   font-weight: 400;
   text-transform: uppercase;
   color: var(--basik-grey);
-  border: 1px solid var(--basik-light-black);
+  outline: 1px solid var(--basik-light-black);
+  border: 1px solid @opacity-transparent;
   padding: 13px 20px 12px 15px;
   background-repeat: no-repeat;
 
@@ -140,7 +141,8 @@
   }
 
   &:focus {
-    border: 2px solid var(--basik-grey);
+    border: 1px solid var(--basik-grey);
+    outline: 1px solid var(--basik-grey);
 
     & + .@{field-text}__icon-email {
       stroke: var(--basik-green);
@@ -152,7 +154,8 @@
   }
 
   &:invalid:not(:placeholder-shown) {
-    border: 2px solid var(--basik-red);
+    border: 1px solid var(--basik-red);
+    outline: 1px solid var(--basik-red);
 
     & + .@{field-text}__icon-email {
       stroke: var(--basik-red);
@@ -164,7 +167,7 @@
   }
 
   &:focus-visible {
-    outline: none;
-    border: 2px solid var(--basik-grey);
+    border: 1px solid var(--basik-grey);
+    outline: 1px solid var(--basik-grey);
   }
 }
