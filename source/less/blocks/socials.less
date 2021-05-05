@@ -3,11 +3,11 @@
   padding: 36px 0 22px 0;
 
   @media (min-width: @tablet-width) {
-    padding: 52px 0 22px 0;
+    padding: 50px 0 58px 0;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 46px 0 22px 0;
+    padding: 53px 0 57px 0;
   }
 
   &--form {
@@ -52,9 +52,8 @@
   cursor: pointer;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 0;
+    margin: 3px 157px 0 0;
     height: 24px;
-    margin-right: 157px;
   }
 
   @media (min-width: @desktop-width) {
@@ -105,14 +104,6 @@
 .socials__item-icon {
   display: block;
 
-  &:hover {
-    fill: var(--basik-green);
-  }
-
-  &:active {
-    fill-opacity: 0.3;
-  }
-
   &--vk {
     width: 23px;
     height: 13px;
@@ -141,15 +132,6 @@
       height: 31px;
       width: 17px;
     }
-
-    &:hover {
-      stroke: var(--basik-green);
-      fill: none;
-    }
-
-    &:active {
-      opacity: 0.3;
-    }
   }
 
   &--logo {
@@ -158,10 +140,37 @@
   }
 }
 
+.socials__link,
+.socials__html-academy-logo {
+  &:hover .socials__item-icon {
+    fill: var(--basik-green);
+  }
+
+  &:active .socials__item-icon {
+    opacity: 0.3;
+  }
+
+  &--facebook {
+    &:hover .socials__item-icon {
+      stroke: var(--basik-green);
+      fill: none;
+    }
+  }
+}
+
 .socials__html-academy {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 2px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 1px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 3px;
+  }
 
   & a {
     @media (min-width: @tablet-width) {
