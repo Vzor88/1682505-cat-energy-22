@@ -190,7 +190,7 @@
     display: block;
     height: 520px;
     position: absolute;
-    top: -492px;
+    top: -491px;
     width: 100%;
     object-fit: none;
   }
@@ -206,19 +206,19 @@
   }
 
   &--before {
-    margin-bottom: 32px;
+    margin-bottom: 33px;
+    margin-top: -3px;
 
     @media (min-width: @tablet-width) {
-      margin-top: -5px;
       height: 620px;
-      right: 354px;
+      right: 0;
+      top: -496px;
       object-position: 16px;
     }
 
     @media (min-width: @desktop-width) {
       object-position: -20px;
-      right: 345px;
-      margin-top: -4px;
+      top: -4px;
     }
   }
 
@@ -227,15 +227,14 @@
     margin-left: 37px;
 
     @media (min-width: @tablet-width) {
-      left: 317px;
+      left: -37px;
       height: 607px;
       object-position: -247px;
     }
 
     @media (min-width: @desktop-width) {
       object-position: -274px;
-      left: 308px;
-      margin-top: -2px;
+      margin-top: 1px;
     }
   }
 }

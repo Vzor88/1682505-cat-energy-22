@@ -177,16 +177,16 @@
         </div>
         <div class="live-example__slider slider">
           <div class="slider__wrapper">
-            <div class="slider__wrapper-image slider__wrapper-image--before">
-              <picture>
-                <source media="(min-width: 768px)" srcset="img/cat/cat-after.png 1x, img/cat/cat-after@2x.png 2x">
-                <img class="slider__image slider__image--active slider__image--after" src="img/cat/cat-after-mobile.png" width="251" height="240" srcset="img/cat/cat-after-mobile@2x.png 2x" alt="изображение худого кота">
-              </picture>
-            </div>
             <div class="slider__wrapper-image slider__wrapper-image--after">
               <picture>
+                <source media="(min-width: 768px)" srcset="img/cat/cat-after.png 1x, img/cat/cat-after@2x.png 2x">
+                <img class="slider__image slider__image--after" src="img/cat/cat-after-mobile.png" width="251" height="240" srcset="img/cat/cat-after-mobile@2x.png 2x" alt="изображение худого кота">
+              </picture>
+            </div>
+            <div class="slider__wrapper-image slider__wrapper-image--before">
+              <picture>
                 <source media="(min-width: 768px)" srcset="img/cat/cat-before.png 1x, img/cat/cat-before@2x.png 2x">
-                <img class="slider__image slider__image--before" src="img/cat/cat-before-mobile.png" width="311" height="232" srcset="img/cat/cat-before-mobile@2x.png 2x" alt="изображение полного кота">
+                <img class="slider__image slider__image--active slider__image--before" src="img/cat/cat-before-mobile.png" width="311" height="232" srcset="img/cat/cat-before-mobile@2x.png 2x" alt="изображение полного кота">
               </picture>
             </div>
           </div>
@@ -244,7 +244,9 @@
     <section class="socials">
       <div class="socials__wrapper">
         <h2 class="visually-hidden">Полезные ссылки</h2>
-        <img class="socials__text-logo" src="./img/logo-text-mobile.svg" width="101" height="18" alt="название компании Cat Energy">
+        <a class="socials__logo-link" href="#">
+          <img class="socials__text-logo" src="img/logo-text-footer.svg" width="128" height="24" alt="название компании Cat Energy">
+        </a>
         <ul class="socials__list">
           <li class="socials__item">
             <a class="socials__link" href="#">
