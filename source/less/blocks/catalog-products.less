@@ -6,11 +6,11 @@
   @media (min-width: @tablet-width) {
     border: none;
     padding-top: 0;
-    margin-bottom: 67px;
+    margin-bottom: 66px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 74px;
+    margin-bottom: 75px;
   }
 }
 
@@ -56,7 +56,7 @@
 
 .catalog-products__item {
   border-top: 1px solid var(--basik-special-darkgrey);
-  padding-top: 18px;
+  padding-top: 20px;
 
   @media (min-width: @tablet-width) {
     padding-top: 0;
@@ -85,9 +85,21 @@
     padding: 162px 37px 40px 39px;
   }
 
-  &--rice-500 {
+  &--rice-500,
+  &--buckwheat-500,
+  &--buckwheat-1000 {
     @media (min-width: @tablet-width) {
-      padding: 163px 37px 40px 39px;
+      padding: 162px 37px 40px 39px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-top: 160px;
+    }
+  }
+
+  &--rice-500 .catalog-products__title-link {
+    @media (min-width: @tablet-width) {
+      margin-left: 0;
     }
   }
 }
@@ -113,12 +125,12 @@
   left: 50%;
 
   &--chicken-500 {
-    width: 80px;
-    height: 86px;
-    transform: translate(-50%, -57%);
+    transform: translate(-50%, -58%);
 
     @media (min-width: @tablet-width) {
       transform: translate(-50%, -45.5%);
+      width: 161px;
+      height: 172px;
     }
 
     @media (min-width: @desktop-width) {
@@ -127,27 +139,27 @@
   }
 
   &--chicken-1000 {
-    width: 84px;
-    height: 101px;
-    transform: translate(-50%, -51%);
+    transform: translate(-50%, -52%);
 
     @media (min-width: @tablet-width) {
-      transform: translate(-50%, -52%);
+      transform: translate(-50%, -51.5%);
+      width: 168px;
+      height: 207px;
     }
 
     @media (min-width: @desktop-width) {
-      transform: translate(-49%, -53.8%);
+      transform: translate(-49%, -54%);
     }
   }
 
   &--fish-1000,
   &--buckwheat-1000 {
-    width: 84px;
-    height: 101px;
-    transform: translate(-50%, -51%);
+    transform: translate(-50%, -52.5%);
 
     @media (min-width: @tablet-width) {
-      transform: translate(-50%, -52%);
+      width: 168px;
+      height: 200px;
+      transform: translate(-49.5%, -52.5%);
     }
 
     @media (min-width: @desktop-width) {
@@ -156,9 +168,13 @@
   }
 
   &--fish-500 {
-    width: 72px;
-    height: 78px;
-    transform: translate(-50%, -46%);
+    transform: translate(-50%, -47%);
+
+    @media (min-width: @tablet-width) {
+      width: 163px;
+      height: 174px;
+      transform: translate(-49%, -46%);
+    }
 
     @media (min-width: @desktop-width) {
       transform: translate(-50%, -49%);
@@ -166,9 +182,13 @@
   }
 
   &--buckwheat-500 {
-    width: 72px;
-    height: 78px;
-    transform: translate(-50%, -43%);
+    transform: translate(-50%, -43.5%);
+
+    @media (min-width: @tablet-width) {
+      width: 161px;
+      height: 171px;
+      transform: translate(-49%, -44.5%);
+    }
 
     @media (min-width: @desktop-width) {
       transform: translate(-50%, -49%);
@@ -176,11 +196,11 @@
   }
 
   &--rice-500 {
-    width: 78px;
-    height: 84px;
-    transform: translate(-50%, -46%);
+    transform: translate(-50%, -47.5%);
 
     @media (min-width: @tablet-width) {
+      width: 163px;
+      height: 174px;
       transform: translate(-50%, -45%);
     }
 
@@ -191,8 +211,6 @@
 
   @media (min-width: @tablet-width) {
     top: 33px;
-    width: fit-content;
-    height: fit-content;
   }
 }
 
@@ -212,6 +230,10 @@
     text-align: center;
     margin-left: 3px;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 1px;
+  }
 }
 
 .catalog-products__table-data {
@@ -220,7 +242,7 @@
   font-size: 12px;
   line-height: 16px;
   color: var(--basik-grey);
-  margin-bottom: 23px;
+  margin-bottom: 21px;
   padding: 0;
   border-spacing: 0;
 

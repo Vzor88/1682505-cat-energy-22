@@ -1,17 +1,33 @@
 .promo-stock {
   padding: 58px 0 42px 0;
-  background-color: var(--basik-transparent-green);
+  background-image: url("../img/gift-photo-mobile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
   margin-bottom: 35px;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/gift-photo-mobile@2x.png");
+  }
+
   @media (min-width: @tablet-width) {
-    padding: 55px 0 68px 79px;
+    background-image: url("../img/gift-photo-tablet.png");
+    padding: 54px 0 69px 79px;
     margin-bottom: 76px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/gift-photo-tablet@2x.png");
+    }
   }
 
   @media (min-width: @desktop-width) {
     padding: 55px 0 40px 0;
     width: 245px;
     margin: 0;
+    background-image: url("../img/gift-photo-desktop.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/gift-photo-desktop@2x.png");
+    }
   }
 }
 

@@ -53,7 +53,7 @@
 
   &--catalog {
     @media (min-width: @tablet-width) {
-      margin-top: 10px;
+      margin-top: 11px;
     }
   }
 }
@@ -87,7 +87,19 @@
 
   &--catalog {
     @media (min-width: @tablet-width) {
-      margin-right: 36px;
+      margin-right: 38px;
+
+      &:first-child {
+        margin-right: 33px;
+      }
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-right: 34px;
+
+      &:first-child {
+        margin-right: 36px;
+      }
     }
   }
 }
@@ -126,7 +138,7 @@
     }
   }
 
-  &-catalog {
+  &--catalog {
     @media (min-width: @tablet-width) {
       padding: 0 0 7px 0;
     }
