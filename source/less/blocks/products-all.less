@@ -1,15 +1,10 @@
 .products-all {
   padding-top: 25px;
-  background-image: url("../img/icons/icon-plus.svg");
-  background-repeat: no-repeat;
-  background-position: 50% 25px;
   border-bottom: 1px solid var(--basik-special-darkgrey);
 
   @media (min-width: @tablet-width) {
     padding-top: 0;
     border: 2px solid var(--basik-light-grey);
-    background-size: 60px;
-    background-position: 130px 53px;
   }
 
   @media (min-width: @desktop-width) {
@@ -26,16 +21,28 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 161px 35px 38px 36px;
+    padding: 53px 35px 38px 34px;
+  }
+}
+
+.products-all__icon-plus {
+  fill: none;
+  stroke: var(--basik-medium-grey);
+  margin-bottom: 21px;
+
+  @media (min-width: @tablet-width) {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 48px;
   }
 }
 
 .products-all__title {
   width: auto;
-  margin: 54px 0 9px 0;
+  margin-bottom: 9px;
 
   @media (min-width: @tablet-width) {
-    margin: 0 0 25px 0;
+    margin-bottom: 25px;
     width: 174px;
     line-height: 22px;
   }
