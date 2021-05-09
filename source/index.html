@@ -8,7 +8,7 @@
   <link rel="icon" href="img/favicons/32.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/180.png">
   <link rel="manifest" href="manifest.webmanifest">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body class="page-body">
   <header class="page-header">
@@ -182,12 +182,16 @@
           <div class="slider__wrapper">
             <div class="slider__wrapper-image slider__wrapper-image--after">
               <picture>
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/cat/cat-after.webp 1x, img/cat/cat-after@2x.webp 2x">
+                <source type="image/webp" srcset="img/cat/cat-after-mobile.webp 1x, img/cat/cat-after-mobile@2x.webp 2x">
                 <source media="(min-width: 768px)" srcset="img/cat/cat-after.png 1x, img/cat/cat-after@2x.png 2x">
                 <img class="slider__image slider__image--after" src="img/cat/cat-after-mobile.png" width="251" height="240" srcset="img/cat/cat-after-mobile@2x.png 2x" alt="изображение худого кота">
               </picture>
             </div>
             <div class="slider__wrapper-image slider__wrapper-image--before">
               <picture>
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/cat/cat-before.webp 1x, img/cat/cat-before@2x.webp 2x">
+                <source type="image/webp" srcset="img/cat/cat-before-mobile.webp 1x, img/cat/cat-before-mobile@2x.webp 2x">
                 <source media="(min-width: 768px)" srcset="img/cat/cat-before.png 1x, img/cat/cat-before@2x.png 2x">
                 <img class="slider__image slider__image--active slider__image--before" src="img/cat/cat-before-mobile.png" width="311" height="232" srcset="img/cat/cat-before-mobile@2x.png 2x" alt="изображение полного кота">
               </picture>
@@ -240,6 +244,8 @@
               <img class="map__image" src="img/map/map-mobile.png" width="320" height="362" srcset="img/map/map-mobile@2x.png 2x" alt="изображение карты по ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
             </picture>
             <picture>
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/map/map-point.webp 1x, img/map/map-point@2x.webp 2x">
+              <source type="image/webp" srcset="img/map/map-point-mobile.webp 1x, img/map/map-point-mobile@2x.webp 2x">
               <source media="(min-width: 768px)" srcset="img/map/map-point.png 1x, img/map/map-point@2x.png 2x">
               <img class="map__image-point" src="img/map/map-point-mobile.png" width="57" height="53" srcset="img/map/map-point-mobile@2x.png 2x" alt="Местоположение на карте адреса ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
             </picture>
@@ -289,6 +295,6 @@
       </div>
     </section>
   </footer>
-  <script src="js/script.js"></script>
+  <script src="js/script.min.js"></script>
 </body>
 </html>
