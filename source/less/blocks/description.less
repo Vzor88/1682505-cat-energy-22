@@ -126,7 +126,7 @@
     }
 
     &::after {
-      right: 31%;
+      right: 29.2%;
 
       @media (min-width: @desktop-width) {
         right: 6%;
@@ -150,6 +150,19 @@
     &::before {
       background-image: url("../img/icons/icon-time.svg");
     }
+
+    & .description__item-text {
+      padding-right: 2px;
+
+      @media (min-width: @tablet-width) {
+        padding-right: 0;
+      }
+
+      @media (min-width: @desktop-width) {
+        padding-right: 0;
+        letter-spacing: 0.85px;
+      }
+    }
   }
 }
 
@@ -157,21 +170,16 @@
   font-family: @font-arial;
   color: var(--basik-grey);
   margin: 0;
+  letter-spacing: -0.1px;
 
   @media (min-width: @tablet-width) {
-    padding-top: 113px;
-    line-height: 23px;
-    letter-spacing: 1.15px;
-  }
-
-  @media (min-width: @desktop-width) {
+    padding-top: 111px;
+    line-height: 24px;
     letter-spacing: 1px;
   }
 }
 
-.description__text-br {
-  display: none;
-
+.description__text-span {
   @media (min-width: @tablet-width) {
     display: block;
   }
