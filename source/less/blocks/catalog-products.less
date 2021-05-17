@@ -108,6 +108,14 @@
   position: relative;
   grid-row: span 2;
 
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active &-image {
+    opacity: 0.4;
+  }
+
   @media (min-width: @tablet-width) {
     position: static;
   }
@@ -255,8 +263,13 @@
   }
 }
 
+.catalog-products__table-option {
+  padding: 0;
+}
+
 .catalog-products__table-value {
   .table-string-end;
+  padding: 0;
 
   @media (min-width: @tablet-width) {
     padding: 7px 0;

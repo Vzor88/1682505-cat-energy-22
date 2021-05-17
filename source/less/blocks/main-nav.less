@@ -37,7 +37,7 @@
     background-repeat: no-repeat;
   }
 
-  &--nojs {
+  &--nojs &__toggle {
     display: none;
   }
 }
@@ -48,10 +48,12 @@
   @media (min-width: @tablet-width) {
     display: flex;
     flex-wrap: wrap;
+    width: 440px;
     margin-top: 15px;
 
     @media (min-width: @desktop-width) {
       margin-top: 8px;
+      width: 480px;
     }
   }
 

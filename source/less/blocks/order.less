@@ -138,6 +138,10 @@
 }
 
 .order__choice {
+  &:focus + .choice::before {
+    border: 1px solid var(--basik-black);
+  }
+
   &:checked + .choice::after {
     opacity: 1;
   }
